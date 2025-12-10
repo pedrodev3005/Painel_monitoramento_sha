@@ -87,64 +87,91 @@ void visualizarDadosBrutos(const char* dbPath) {
 }
 
 
+// EM main.cpp
+
 void processarComando(int comando, MonitoramentoFacade& fachada) {
     int idUsuario;
     std::string nome, cpf, idSHA;
     double limite;
 
+    // Função auxiliar para limpar o buffer após o erro de entrada
+    auto limparBuffer = []() {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    };
+
     switch (comando) {
-        case 1: {
+        case 1: { // 👤 Criar Novo Usuário (Testa DAO de Usuário)
+            std::cout << "--- Criar Novo Usuário ---" << std::endl;
             std::cout << "-> ID do novo usuario (ex: 102): ";
-            std::cin >> idUsuario;
+            if (!(std::cin >> idUsuario)) { limparBuffer(); std::cout << "ID inválido." << std::endl; break; }
             std::cout << "-> Nome do usuario: ";
-            // Usa std::ws para consumir espaços em branco antes de ler a string completa
             std::cin >> std::ws; 
             std::getline(std::cin, nome);
             std::cout << "-> CPF (sem formatacao): ";
             std::cin >> cpf;
             
             Usuario novoUser = {idUsuario, nome, cpf, {}};
-            fachada.criarUsuario(novoUser);
+            if (fachada.criarUsuario(novoUser)) {
+                std::cout << "\n SUCESSO! Usuário " << nome << " (ID: " << idUsuario << ") registrado no DB (DAO)." << std::endl;
+            } else {
+                std::cout << "\n FALHA! Não foi possível criar o usuário. (ID duplicado ou erro de DB)." << std::endl;
+            }
             break;
         }
-        case 2: {
+        case 2: { // 🚨 Definir Limite de Alerta (Testa DAO de Limite)
+            std::cout << "--- Definir Limite de Alerta ---" << std::endl;
             std::cout << "-> ID do usuario para limite: ";
-            std::cin >> idUsuario;
+            if (!(std::cin >> idUsuario)) { limparBuffer(); std::cout << "ID inválido." << std::endl; break; }
             std::cout << "-> Limite de consumo (m3, ex: 80.0): ";
-            std::cin >> limite;
-            fachada.definirLimiteAlerta(idUsuario, limite);
+            if (!(std::cin >> limite)) { limparBuffer(); std::cout << "Limite inválido." << std::endl; break; }
+
+            if (fachada.definirLimiteAlerta(idUsuario, limite)) {
+                std::cout << "\n SUCESSO! Limite de " << limite << " m³ definido para o ID " << idUsuario << " (DAO de Limites)." << std::endl;
+            } else {
+                std::cout << "\n FALHA! Não foi possível definir o limite. Usuário ID " << idUsuario << " não existe ou erro de DB." << std::endl;
+            }
             break;
         }
-        case 3: {
+        case 3: { // PROCESSAR LEITURA (Template Method, Strategy, Adapter)
+            std::cout << "--- Processar Leitura (Template Method) ---" << std::endl;
             std::cout << "-> ID do usuario para monitorar: ";
-            std::cin >> idUsuario;
+            if (!(std::cin >> idUsuario)) { limparBuffer(); std::cout << "ID inválido." << std::endl; break; }
             std::cout << "-> ID do SHA (ex: SHA-DIG-456): ";
             std::cin >> idSHA;
             
-            std::cout << "Executando Template Method de Monitoramento..." << std::endl;
-            fachada.processarLeituraDiaria(idSHA, idUsuario); // Inicia o fluxo fixo
+            std::cout << "\n--- EXECUTANDO FLUXO FIXO (Template Method) ---" << std::endl;
+            
+            // A fachada aciona o Template Method, que executa: Adapter -> Strategy -> DAO (salvar) -> SubsistemaAlerta
+            fachada.processarLeituraDiaria(idSHA, idUsuario); 
+            
+            std::cout << "\n FLUXO CONCLUÍDO! Verifique o Logger acima para detalhes da execução e Alerta." << std::endl;
             break;
         }
-        case 4: {
+        case 4: { //  Simular Consulta Consolidada (RF 2.3)
+            std::cout << "--- Simular Consulta Consolidada ---" << std::endl;
             std::cout << "-> ID do usuario para consulta: ";
-            std::cin >> idUsuario;
+            if (!(std::cin >> idUsuario)) { limparBuffer(); std::cout << "ID inválido." << std::endl; break; }
             
             // Simula consulta de historico (datas fixas para simplificar o input)
+            std::cout << "\n--- EXECUTANDO CONSULTA CONSOLIDADA (RF 2.3) ---" << std::endl;
             ConsumoDTO c = fachada.monitorarConsumoUsuario(idUsuario, 0, 0); 
-            std::cout << "-> Resultado da Consulta Consolidada: " << c.totalConsumido << " m3." << std::endl;
+            
+            std::cout << "\n RESULTADO (DAO Agregação): Consumo Total para o ID " << idUsuario 
+                      << ": " << c.totalConsumido << " m³." << std::endl;
             break;
         }
-        case 5: { // <-- NOVO CASO
-            // Passa o caminho do arquivo DB. Assumimos que a conexão é "monitoramento.db"
+        case 5: { // Visualizar Dados Brutos (SQLite)
+            std::cout << "\n--- VISUALIZANDO TABELAS DO DB ---" << std::endl;
+            // Nota: Esta função é uma ferramenta de debug e ignora a Fachada/DAOs, acessando o DB diretamente.
             visualizarDadosBrutos("monitoramento.db"); 
             break;
         }
-        
         case 0:
-            std::cout << "Encerrando sistema." << std::endl;
+            std::cout << "\nEncerrando sistema. Adeus!" << std::endl;
             break;
         default:
-            std::cout << "Opcao invalida. Tente novamente." << std::endl;
+            std::cout << "Opção inválida. Tente novamente." << std::endl;
     }
 }
 void inicializarSistema() {
