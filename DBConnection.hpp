@@ -40,10 +40,17 @@ private:
             // Tabela 3: Histórico de Leituras (RF 2)
             "CREATE TABLE IF NOT EXISTS Historico ("
             "idSHA TEXT NOT NULL,"
-            "idUsuario INTEGER NOT NULL," // <-- NOVO: Para rastreabilidade
+            "idUsuario INTEGER NOT NULL,"
             "volume REAL NOT NULL,"
-            "dataHora INTEGER NOT NULL);";
-
+            "dataHora INTEGER NOT NULL); "
+            
+            // Tabela 4: Configuração de SHA (NOVA - Vincula SHA a Diretório)
+            "CREATE TABLE IF NOT EXISTS ConfiguracaoSHA ("
+            "idSHA TEXT PRIMARY KEY NOT NULL,"
+            "idUsuario INTEGER NOT NULL,"
+            "diretorio TEXT NOT NULL,"
+            "FOREIGN KEY(idUsuario) REFERENCES Usuarios(idUsuario)" // Garante integridade referencial
+            ");";
         int rc_init = sqlite3_exec(db, sql_init, 0, 0, &zErrMsg);
         
         if (rc_init != SQLITE_OK) {

@@ -23,11 +23,12 @@ public:
     UsuarioDAOImpl(DBConnection* conn);
 
     // --- Implementação dos Métodos da Interface (Override) ---
+    std::vector<Usuario> listarTodos(); // <-- NOVO MÉTODO
 
     bool salvar(const Usuario& usuario) override;
     Usuario buscarPorID(int idUsuario) override;
     bool vincularSHA(int idUsuario, const std::string& idSHA) override;
-    std::vector<Conta> obterContasPorUsuario(int idUsuario) override;
+    std::vector<std::string> obterContasPorUsuario(int idUsuario) override;
 };
 
 // Se você decidir colocar a implementação de construtores e métodos simples aqui (apenas no cabeçalho):

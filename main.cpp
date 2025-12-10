@@ -9,6 +9,7 @@
 #include "LeitorImagemSHA.hpp"
 #include "ConsumoHistoricoDAO.hpp" 
 #include "SubsistemaDados.hpp"
+#include "SHAConfigDAO.hpp"
 #include <iostream>
 #include <limits> // Para limpar o buffer
 #include "sqlite3.h"
@@ -22,7 +23,8 @@ void exibirMenu() {
     std::cout << "2. Definir Limite de Alerta para um ID" << std::endl;
     std::cout << "3. PROCESSAR LEITURA (ID do Usuario e SHA)" << std::endl;
     std::cout << "4. Simular Consulta Consolidada (RF 2.3)" << std::endl;
-    std::cout << "5. VISUALIZAR DADOS BRUTOS (SQLITE)" << std::endl; // <-- NOVA OPÇÃO
+    std::cout << "5. VISUALIZAR DADOS BRUTOS (SQLITE)" << std::endl; 
+    std::cout << "6. CONFIGURAR NOVO SHA (Diretorio e Usuario)" << std::endl; // <-- NOVO
     std::cout << "0. Sair" << std::endl;
     std::cout << "---------------------------------------------" << std::endl;
     std::cout << "Digite sua opcao: ";
@@ -87,9 +89,7 @@ void visualizarDadosBrutos(const char* dbPath) {
 }
 
 
-// EM main.cpp
-
-void processarComando(int comando, MonitoramentoFacade& fachada) {
+void processarComando(int comando, MonitoramentoFacade& fachada, SHAConfigDAO& shaConfigDAO, UsuarioDAOImpl& uDao) {
     int idUsuario;
     std::string nome, cpf, idSHA;
     double limite;
@@ -161,10 +161,68 @@ void processarComando(int comando, MonitoramentoFacade& fachada) {
                       << ": " << c.totalConsumido << " m³." << std::endl;
             break;
         }
-        case 5: { // Visualizar Dados Brutos (SQLite)
-            std::cout << "\n--- VISUALIZANDO TABELAS DO DB ---" << std::endl;
-            // Nota: Esta função é uma ferramenta de debug e ignora a Fachada/DAOs, acessando o DB diretamente.
-            visualizarDadosBrutos("monitoramento.db"); 
+
+        case 5: { // VISUALIZAR DADOS BRUTOS
+            // ... (Mostrar outras tabelas se necessário) ...
+            
+            std::cout << "\n=============================================" << std::endl;
+            std::cout << "           Tabela: Usuarios e SHAs Ativos " << std::endl;
+            std::cout << "=============================================" << std::endl;
+            
+            // 1. Obter todos os usuários
+            std::vector<Usuario> todosUsuarios = uDao.listarTodos(); // Chamada ao método do DAO
+            
+            // 2. Obter todas as configurações de SHA (para cruzar os dados)
+            std::vector<ConfiguracaoSHA> todasConfiguracoesSHA = shaConfigDAO.listarTodosAtivos();
+            
+            for (const auto& user : todosUsuarios) {
+                std::cout << "ID Usuario: " << user.idUsuario 
+                        << " | Nome: " << user.nome 
+                        << " | CPF: " << user.cpf;
+                
+                bool temSHA = false;
+                
+                // 3. Procura os SHAs para este usuário específico
+                for (const auto& config : todasConfiguracoesSHA) {
+                    if (config.idUsuario == user.idUsuario) {
+                        if (!temSHA) {
+                            std::cout << "\n\t--> SHAs Ativos: ";
+                            temSHA = true;
+                        } else {
+                            std::cout << ", ";
+                        }
+                        std::cout << config.idSHA << " [Dir: " << config.diretorio << "]";
+                    }
+                }
+                
+                if (!temSHA) {
+                    std::cout << "\n\t--> SHAs Ativos: NENHUM CADASTRADO";
+                }
+                std::cout << "\n---------------------------------------------" << std::endl;
+            }
+            
+            break;
+        }
+
+        case 6: { //  CONFIGURAR NOVO SHA
+            std::string diretorio;
+            
+            std::cout << "--- Configurar Novo SHA (Vínculo Lógico/Físico) ---" << std::endl;
+            std::cout << "-> ID do Usuario Proprietário: ";
+            if (!(std::cin >> idUsuario)) { limparBuffer(); std::cout << "ID inválido." << std::endl; break; }
+            std::cout << "-> ID Lógico do SHA (ex: SHA-DIG-456): ";
+            std::cin >> idSHA;
+            std::cout << "-> Diretório Físico (Ex: C:/Users/.../SHAs/SHA-DIG-456/): ";
+            std::cin >> std::ws;
+            std::getline(std::cin, diretorio);
+            
+            ConfiguracaoSHA config(idSHA, idUsuario, diretorio);
+            
+            if (shaConfigDAO.salvarConfiguracao(config)) {
+                std::cout << "\n✅ SUCESSO! SHA " << idSHA << " configurado e vinculado ao diretório (DAO)." << std::endl;
+            } else {
+                std::cout << "\n❌ FALHA! Nao foi possivel salvar a configuracao. (Erro de DB)." << std::endl;
+            }
             break;
         }
         case 0:
@@ -179,6 +237,10 @@ void inicializarSistema() {
     DBConnection conn;
     ConsumoHistoricoDAO cDao(&conn);
     LimiteAlertaDAO lDao;
+    SHAConfigDAO shaConfigDAO(&conn); // <-- INSTANCIAÇÃO
+
+    UsuarioDAOImpl uDao(&conn);
+
     
     // 2. Inicializa Subsistemas
     UsuarioDAOImpl uDaoImpl(&conn);
@@ -206,7 +268,7 @@ void inicializarSistema() {
             comando = -1;
         }
         if (comando != 0) {
-            processarComando(comando, fachada);
+            processarComando(comando, fachada, shaConfigDAO, uDao);
         }
     }
 }

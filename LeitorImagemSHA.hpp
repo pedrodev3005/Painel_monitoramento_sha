@@ -17,7 +17,11 @@ public:
      */
     Imagem obterImagem(const std::string& idSHA) {
         Logger::getInstance()->registrarInfo("LeitorImagemSHA", "Buscando imagem para SHA: " + idSHA);
-        return { "/diretorio/sha/" + idSHA + ".jpg" };
+        return Imagem(
+        idSHA, 
+        "Buffer_Vazio_Simulado", 
+        "/diretorio/sha/" + idSHA + ".bmp" // Caminho Simulado
+        );
     }
 
     /**

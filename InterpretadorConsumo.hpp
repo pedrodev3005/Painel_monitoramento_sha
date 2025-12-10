@@ -6,10 +6,6 @@
 #include "Entidades.hpp" // Inclui TipoMedidor
 #include <string>
 
-// Simula a estrutura de uma imagem binária ou caminho
-struct Imagem {
-    std::string caminhoArquivo; 
-};
 
 /**
  * @brief Interface (Contrato) do Padrão Strategy para algoritmos de interpretação de imagem (OCR).

@@ -47,7 +47,7 @@ public:
      * @param idUsuario ID do usuário.
      * @return Lista de objetos Conta.
      */
-    virtual std::vector<Conta> obterContasPorUsuario(int idUsuario) = 0;
+    virtual std::vector<std::string> obterContasPorUsuario(int idUsuario) = 0;
 
     // [Outros métodos CRUD como atualizar e deletar podem ser adicionados aqui, se necessário]
 };

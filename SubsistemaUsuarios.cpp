@@ -35,7 +35,7 @@ Usuario SubsistemaUsuarios::buscarUsuarioComContas(int idUsuario) {
 
     if (u.idUsuario != 0) {
         // 2. Delegação de busca secundária (consolidação de dados)
-        u.contas = usuarioDAO->obterContasPorUsuario(idUsuario);
+        u.shasMonitorados = usuarioDAO->obterContasPorUsuario(idUsuario);
         Logger::getInstance()->registrarInfo("SubsistemaUsuarios", "Usuario ID " + std::to_string(idUsuario) + " e contas obtidos.");
     }
     return u;

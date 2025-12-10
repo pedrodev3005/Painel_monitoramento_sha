@@ -44,10 +44,49 @@ struct Conta {
 
 // Usado para o Subsistema de Usuários
 struct Usuario {
-    int idUsuario = 0;
+    int idUsuario;
     std::string nome;
     std::string cpf;
-    std::vector<Conta> contas; // SHAs vinculados a este usuário
+    
+    std::vector<std::string> shasMonitorados; // <-- CORREÇÃO: Membro que armazena os SHAs/Contas
+
+    // --- CONSTRUTORES ---
+    // Construtor do DAO (para SELECTS)
+    Usuario(int id, const char* n, const char* c) 
+        : idUsuario(id), 
+          nome(n ? n : ""), 
+          cpf(c ? c : "") 
+    {}
+    
+    // Construtor completo/padrão (Mantenha todos)
+    Usuario() : idUsuario(0) {} 
+
+    Usuario(int id, std::string n, std::string c, std::vector<std::string> shas) 
+        : idUsuario(id), nome(std::move(n)), cpf(std::move(c)), shasMonitorados(std::move(shas)) 
+    {}
+};
+
+struct Imagem {
+    std::string idSHA;          // Identificador do hidrômetro
+    std::string bufferConteudo; // Conteúdo da imagem (simulado)
+    std::string caminhoArquivo; // O caminho real no sistema de arquivos
+    
+    // Construtor obrigatório de 3 campos (Corrige o erro de conversão/inicialização)
+    Imagem(std::string sha, std::string buffer, std::string caminho) 
+        : idSHA(sha), bufferConteudo(buffer), caminhoArquivo(caminho) {}
+};
+
+/**
+ * @brief Entidade para armazenar o vinculo entre o ID Lógico do SHA,
+ * o Usuário proprietário e o Caminho Físico do diretório de imagens.
+ */
+struct ConfiguracaoSHA {
+    std::string idSHA;
+    int idUsuario;
+    std::string diretorio;
+
+    ConfiguracaoSHA(std::string sha = "", int usuario = 0, std::string dir = "")
+        : idSHA(sha), idUsuario(usuario), diretorio(dir) {}
 };
 
 #endif // ENTIDADES_H
