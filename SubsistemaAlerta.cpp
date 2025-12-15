@@ -2,15 +2,15 @@
 
 #include "SubsistemaAlerta.hpp"
 
-bool SubsistemaAlerta::definirLimite(int idUsuario, double limiteVolumeM3) {
-    // Persiste o limite definido
-    bool sucesso = limiteDAO->salvarLimite(idUsuario, limiteVolumeM3);
-    if (sucesso) {
-        Logger::getInstance()->registrarInfo("SubsistemaAlerta", "Limite de " + std::to_string(limiteVolumeM3) + "m3 definido para ID " + std::to_string(idUsuario));
+bool SubsistemaAlerta::definirLimite(int idUsuario, const std::string& idSHA, double limiteVolumeM3) {
+    // Chama o DAO com o NOVO parâmetro idSHA
+    if (limiteDAO->salvarLimite(idUsuario, idSHA, limiteVolumeM3)) {
+        Logger::getInstance()->registrarInfo("SubsistemaAlerta", "Limite de " + std::to_string(limiteVolumeM3) + 
+                                            "m³ definido para SHA " + idSHA + " (Usuario " + std::to_string(idUsuario) + ").");
+        return true;
     }
-    return sucesso;
+    return false;
 }
-
 void SubsistemaAlerta::notificarAlerta(int idUsuario, const AlertaConsumo& alerta, CanalAlerta canal) {
     //Usa a Factory para obter o objeto de envio correto
     ServicoNotificacao* notificador = notificadorFactory->criarNotificador(canal);
@@ -23,23 +23,23 @@ void SubsistemaAlerta::notificarAlerta(int idUsuario, const AlertaConsumo& alert
 
 // Método que será chamado pelo Template Method do Subsistema de Dados
 bool SubsistemaAlerta::verificarLimiteExcedido(int idUsuario, const std::string& idSHA, double volumeAtual) {
-    double limite = limiteDAO->buscarLimite(idUsuario);
+    // Chama o DAO com o NOVO parâmetro idSHA para buscar o limite
+    double limite = limiteDAO->buscarLimite(idUsuario, idSHA); 
     
+    // Se o limite for 0.0 (padrão ou não encontrado), não disparamos alerta (ou usamos um limite padrão, 
+    // mas vamos manter a lógica de usar o valor cadastrado).
+    if (limite == 0.0) {
+        Logger::getInstance()->registrarInfo("SubsistemaAlerta", "Limite nao encontrado para SHA " + idSHA + ". Alerta ignorado.");
+        return false;
+    }
+
     if (volumeAtual > limite) {
-        // Gera o DTO de Alerta
-        AlertaConsumo alerta = {
-            idUsuario, 
-            "", // SHA ID seria preenchido antes
-            volumeAtual, 
-            "Consumo excedeu o limite de " + std::to_string(limite) + " m3.",
-            CAGEPA // Alerta padrão para a concessionária
-        };
-        
-        // Dispara o alerta para a concessionária e o usuário
-        notificarAlerta(idUsuario, alerta, CAGEPA);
-        notificarAlerta(idUsuario, alerta, USUARIO);
-        
+        Logger::getInstance()->registrarAlerta("SubsistemaAlerta", "LIMITE EXCEDIDO! SHA " + idSHA + ": " + 
+                                               std::to_string(volumeAtual) + " m³ > Limite de " + std::to_string(limite) + " m³.");
         return true;
     }
+    
+    Logger::getInstance()->registrarInfo("SubsistemaAlerta", "Volume normal para SHA " + idSHA + " (" + 
+                                         std::to_string(volumeAtual) + " m³).");
     return false;
 }

@@ -37,3 +37,9 @@ void Logger::registrarEventoCritico(const std::string& subsistema, const std::st
     // logs críticos para auditoria (pode ser gravado em um arquivo separado)
     std::cout << obterTimestamp() << " [CRITICAL] [" << subsistema << "] " << msg << " <-- AÇÃO DE AUDITORIA" << std::endl;
 }
+
+void Logger::registrarAlerta(const std::string& origem, const std::string& mensagem) {
+    // Implemente aqui como a mensagem de alerta deve ser formatada e impressa.
+    std::cout << "[ALERTA] [" << origem << "] " << mensagem << std::endl;
+    // Você pode usar cores ou uma formatação especial aqui
+}

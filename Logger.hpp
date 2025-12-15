@@ -30,8 +30,9 @@ public:
     static Logger* getInstance();
 
     // Métodos de registro
-    void registrarInfo(const std::string& subsistema, const std::string& msg);
-    void registrarErro(const std::string& subsistema, const std::string& msg);
+    void registrarInfo(const std::string& origem, const std::string& mensagem);
+    void registrarErro(const std::string& origem, const std::string& mensagem);
+    void registrarAlerta(const std::string& origem, const std::string& mensagem); // <-- NOVO
     void registrarEventoCritico(const std::string& subsistema, const std::string& msg);
 };
 

@@ -29,7 +29,7 @@ public:
     ConsumoDTO monitorarConsumoUsuario(int idUsuario, std::time_t inicio, std::time_t fim);
 
     // --- RF 3: Alerta e Configuração (Delega ao SubsistemaAlerta) ---
-    bool definirLimiteAlerta(int idUsuario, double limiteVolumeM3);
+    bool definirLimiteAlerta(int idUsuario, const std::string& idSHA, double limiteVolumeM3);
 };
 
 #endif // MONITORAMENTO_FACADE_H

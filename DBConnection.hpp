@@ -32,10 +32,13 @@ private:
             "nome TEXT NOT NULL,"
             "cpf TEXT NOT NULL); "
             
-            // Tabela 2: Limites de Alerta (RF 3)
+            // DEPOIS (NOVO): Chave Primária Composta
             "CREATE TABLE IF NOT EXISTS Limites ("
-            "idUsuario INTEGER PRIMARY KEY NOT NULL,"
-            "limiteVolumeM3 REAL NOT NULL); "
+            "idUsuario INTEGER NOT NULL,"
+            "idSHA TEXT NOT NULL," // NOVO: Agora o limite é por SHA
+            "limiteVolumeM3 REAL NOT NULL,"
+            "PRIMARY KEY (idUsuario, idSHA)" // Chave composta para unicidade
+            "); "
             
             // Tabela 3: Histórico de Leituras (RF 2)
             "CREATE TABLE IF NOT EXISTS Historico ("

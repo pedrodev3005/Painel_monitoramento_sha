@@ -46,7 +46,7 @@ ConsumoDTO MonitoramentoFacade::monitorarConsumoUsuario(int idUsuario, std::time
 // === RF 3: Alerta e Configuração (Delegação a SubsistemaAlerta) ===
 // =======================================================
 
-bool MonitoramentoFacade::definirLimiteAlerta(int idUsuario, double limiteVolumeM3) {
-    Logger::getInstance()->registrarInfo("MonitoramentoFacade", "Definindo limite de alerta.");
-    return subsistemaAlerta->definirLimite(idUsuario, limiteVolumeM3);
+bool MonitoramentoFacade::definirLimiteAlerta(int idUsuario, const std::string& idSHA, double limiteVolumeM3) {
+    // Repassa a chamada para o SubsistemaAlerta com o NOVO parâmetro idSHA
+    return subsistemaAlerta->definirLimite(idUsuario, idSHA, limiteVolumeM3);
 }

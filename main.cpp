@@ -119,17 +119,22 @@ void processarComando(int comando, MonitoramentoFacade& fachada, SHAConfigDAO& s
             }
             break;
         }
-        case 2: { // 🚨 Definir Limite de Alerta (Testa DAO de Limite)
-            std::cout << "--- Definir Limite de Alerta ---" << std::endl;
-            std::cout << "-> ID do usuario para limite: ";
-            if (!(std::cin >> idUsuario)) { limparBuffer(); std::cout << "ID inválido." << std::endl; break; }
+        case 2: { // 🚨 Definir Limite de Alerta (POR SHA)
+            std::cout << "--- Definir Limite de Alerta (Por SHA) ---" << std::endl;
+            std::cout << "-> ID do usuario proprietário: ";
+            if (!(std::cin >> idUsuario)) { /* ... */ }
+            
+            std::cout << "-> ID do SHA (ex: SHA-DIG-456): "; // <-- NOVO INPUT
+            std::cin >> idSHA; 
+            
             std::cout << "-> Limite de consumo (m3, ex: 80.0): ";
-            if (!(std::cin >> limite)) { limparBuffer(); std::cout << "Limite inválido." << std::endl; break; }
+            if (!(std::cin >> limite)) { /* ... */ }
 
-            if (fachada.definirLimiteAlerta(idUsuario, limite)) {
-                std::cout << "\n SUCESSO! Limite de " << limite << " m³ definido para o ID " << idUsuario << " (DAO de Limites)." << std::endl;
+            // CHAMADA ATUALIZADA com idSHA
+            if (fachada.definirLimiteAlerta(idUsuario, idSHA, limite)) { 
+                std::cout << "\n✅ SUCESSO! Limite de " << limite << " m³ definido para o SHA " << idSHA << "." << std::endl;
             } else {
-                std::cout << "\n FALHA! Não foi possível definir o limite. Usuário ID " << idUsuario << " não existe ou erro de DB." << std::endl;
+                // ...
             }
             break;
         }
@@ -236,7 +241,7 @@ void inicializarSistema() {
     // --- 1. Inicializa dependências ---
     DBConnection conn;
     ConsumoHistoricoDAO cDao(&conn);
-    LimiteAlertaDAO lDao;
+    LimiteAlertaDAO lDao(&conn); 
     SHAConfigDAO shaConfigDAO(&conn); // <-- INSTANCIAÇÃO
 
     UsuarioDAOImpl uDao(&conn);
