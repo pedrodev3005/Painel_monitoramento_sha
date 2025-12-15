@@ -32,7 +32,7 @@ void exibirMenu() {
 
 // Função de Callback para exibir os resultados da query
 static int callback(void *data, int argc, char **argv, char **azColName) {
-    // data: string opcional que você passa
+    // data: string opcional
     // argc: número de colunas
     // argv: array com os valores da linha (como strings)
     // azColName: array com os nomes das colunas
