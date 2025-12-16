@@ -1,94 +1,61 @@
-// TemplateMonitoramento.cpp
+// EM TemplateMonitoramento.cpp (Versão Alinhada à Arquitetura)
 
 #include "TemplateMonitoramento.hpp"
+#include "SubsistemaDados.hpp" // Necessário para acessar métodos públicos do SubsistemaDados
+#include "Logger.hpp"
 #include <stdexcept>
-#include "SubsistemaAlerta.hpp" 
-#include "Entidades.hpp"   // <-- CORREÇÃO 2: Contém a definição da struct Imagem
-#include <sstream>
-#include <fstream>         // <-- CORREÇÃO 1: Contém a definição de std::ifstream
-#include <cstdlib>
-#include <ctime>
-#include <limits>
+#include <string>
 
 // =======================================================
-// Implementação da Classe Base (Fluxo Fixo)
+// 1. Template Method (Função Fixa na Classe Base)
 // =======================================================
 
-// método Template é implementado aqui
-void FluxoProcessamentoBase::executarFluxo(const std::string& idSHA, int idUsuario, 
-                                          LeitorImagemSHA* leitor, ConsumoHistoricoDAO* dao, 
-                                          SubsistemaAlerta* alerta) {
+/**
+ * @brief O Template Method: Define o esqueleto fixo do algoritmo.
+ */
+void MonitoramentoTemplate::executarFluxo(const std::string& idSHA, int idUsuario) {
     
-    // 1. Obter Imagem 
-    Logger::getInstance()->registrarInfo("Template", "INICIANDO FLUXO: " + idSHA);
-    
-    // O Adaptador é usado para buscar a imagem (cumpre a restrição SHA)
-    Imagem imagem = leitor->obterImagem(idSHA);
-    
-    // 2. Extrair Consumo (Hook Abstrato - Implementado pela Strategy)
-   double volume = extrairConsumo(imagem);
-    try {
-        volume = extrairConsumo(imagem); // Chama o Hook da subclasse
-    } catch (const std::exception& e) {
-        Logger::getInstance()->registrarErro("Template", "Falha na extração (OCR): " + std::string(e.what()));
-        return; // Falha na leitura, aborta o fluxo
-    }
+    idSHAAtual = idSHA;
+    idUsuarioAtual = idUsuario;
 
-    // 3. Salvar Histórico 
-    LeituraConsumo leitura = {idSHA, volume, std::time(nullptr)};
-    salvarHistorico(idUsuario, leitura, dao); // CORRIGIDO: Passando idUsuario
+    Logger::getInstance()->registrarInfo("Template", "INICIANDO FLUXO FIXO para SHA: " + idSHA);
 
-    // 4. Verificar Alerta (Hook Abstrato - Implementado pelo Subsistema Alerta)
-    verificarLimite(idUsuario, idSHA, volume);
-    
-    Logger::getInstance()->registrarInfo("Template", "FLUXO CONCLUÍDO: Volume: " + std::to_string(volume) + " m3.");
-}
+    // Etapa 1: Obter o dado externo (HOOK)
+    double volume = obterLeitura(); 
 
-// =======================================================
-// Implementação da Classe Concreta (LeituraSHAProcessador)
-// =======================================================
+    if (volume > 0.0) {
+        // Etapa 2: Persistir a informação (HOOK)
+        persistirLeitura();
 
-// Hook 1: Lógica de Extração de Consumo (usa o Padrão Strategy)
-// TemplateMonitoramento.cpp (Dentro do Hook extrairConsumo)
-
-// EM TemplateMonitoramento.cpp (Dentro de LeituraSHAProcessador::extrairConsumo)
-
-double LeituraSHAProcessador::extrairConsumo(const Imagem& imagem) {
-    // Note: Assumindo que a struct Imagem tem o campo 'caminhoArquivo'
-    std::ifstream inputFile(imagem.caminhoArquivo); 
-    std::string volumeString;
-    double volumeReal = 0.0; // Inicializa com valor padrão
-
-    if (inputFile.is_open()) {
-        std::getline(inputFile, volumeString);
-        inputFile.close();
-        
-        try {
-            // Conversão da string lida para double
-            volumeReal = std::stod(volumeString);
-        } catch (const std::exception& e) {
-            Logger::getInstance()->registrarErro("Strategy", "Erro de conversão de string: " + std::string(e.what()));
-            return 0.0; // Retorna 0.0 em caso de erro de leitura numérica
-        }
-        
-        // Lógica de Strategy
-        if (imagem.idSHA.find("DIG") != std::string::npos) { // <-- AGORA idSHA ESTÁ DEFINIDO
-            Logger::getInstance()->registrarInfo("Strategy:Digital", "Processamento digital aplicado.");
-            return volumeReal;
-        } else {
-            Logger::getInstance()->registrarInfo("Strategy:Analogico", "Processamento analogico aplicado.");
-            return volumeReal * 0.95; 
-        }
-
+        // Etapa 3: Verificar e Notificar o Limite (HOOK)
+        verificarDispararAlerta();
     } else {
-        Logger::getInstance()->registrarErro("Strategy", "Nao foi possivel ler o volume do arquivo: " + imagem.caminhoArquivo);
-        // CORREÇÃO 3: Retorno explícito para o caso de arquivo não aberto
-        return 0.0; 
+        Logger::getInstance()->registrarErro("Template", "Leitura de volume invalida (0.0). Processamento interrompido.");
     }
+
+    Logger::getInstance()->registrarInfo("Template", "FLUXO CONCLUÍDO. Volume registrado: " + std::to_string(volume) + " m3.");
 }
 
-// Hook 2: Lógica de Verificação de Limite (usa o SubsistemaAlerta)
-void LeituraSHAProcessador::verificarLimite(int idUsuario, const std::string& idSHA, double volume) {
-    // O Template delega a responsabilidade de verificação e notificação para o SubsistemaAlerta
-    subsistemaAlerta->verificarLimiteExcedido(idUsuario, idSHA, volume);
+
+// =======================================================
+// 2. Implementação da Classe Concreta (LeituraSHAProcessador)
+// =======================================================
+
+// Hook 1: A Leitura é delegada ao SubsistemaDados (que usa o Adapter)
+double LeituraSHAProcessador::obterLeitura() {
+    // Usa o executorDados injetado no construtor para chamar o método que usa o Adapter
+    volumeLido = executorDados->obterLeituraVolume(idSHAAtual); 
+    return volumeLido;
+}
+
+// Hook 2: A Persistência é delegada ao SubsistemaDados (que usa o DAO)
+void LeituraSHAProcessador::persistirLeitura() {
+    // Usa o executorDados injetado no construtor para chamar o método que salva
+    executorDados->salvarConsumo(idSHAAtual, volumeLido);
+}
+
+// Hook 3: A Verificação é delegada ao SubsistemaAlerta
+void LeituraSHAProcessador::verificarDispararAlerta() {
+    // Usa o executorAlerta injetado no construtor para verificar o limite
+    executorAlerta->verificarLimiteExcedido(idUsuarioAtual, idSHAAtual, volumeLido);
 }

@@ -33,7 +33,7 @@ struct AlertaConsumo {
 struct LeituraConsumo {
     std::string idSHA;
     double volume;
-    std::time_t dataHora;
+    std::time_t timestamp; 
 };
 
 // Usado para o Subsistema de Usuários

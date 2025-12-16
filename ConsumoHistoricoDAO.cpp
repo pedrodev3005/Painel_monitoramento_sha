@@ -19,7 +19,7 @@ bool ConsumoHistoricoDAO::salvarLeitura(int idUsuario, const LeituraConsumo& lei
                        leitura.idSHA + "', " + 
                        std::to_string(idUsuario) + ", " + 
                        std::to_string(leitura.volume) + ", " + 
-                       std::to_string(leitura.dataHora) + ");";
+                       std::to_string(leitura.timestamp) + ");";
     
     // Execução da query
     if (conexaoDB->executarQuery(sql)) { 

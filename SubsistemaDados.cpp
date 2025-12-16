@@ -1,18 +1,64 @@
-// SubsistemaDados.cpp
+// SubsistemaDados.cpp (CORRIGIDO)
 
 #include "SubsistemaDados.hpp"
 #include "TemplateMonitoramento.hpp" // Inclui a estrutura do Template Method
 #include "Logger.hpp"
+#include <ctime>
 
-// Construtor: Armazena as dependências que serão passadas para o Template Method.
-SubsistemaDados::SubsistemaDados(LeitorImagemSHA* leitor, SubsistemaAlerta* alerta, ConsumoHistoricoDAO* dao)
-    : leitorSHA(leitor), subsistemaAlerta(alerta), historicoDAO(dao) {
-    
-    Logger::getInstance()->registrarInfo("SubsistemaDados", "Subsistema inicializado e pronto para iniciar fluxos.");
+
+// =========================================================================
+// Construtor CORRIGIDO
+// Recebe 4 dependências e inicializa configDAO
+// =========================================================================
+
+SubsistemaDados::SubsistemaDados(
+    LeitorImagemSHA* leitor, 
+    SubsistemaAlerta* alerta, 
+    ConsumoHistoricoDAO* dao,
+    SHAConfigDAO* configDao // <-- NOVO ARGUMENTO
+)
+    : leitorSHA(leitor), subsistemaAlerta(alerta), historicoDAO(dao), configDAO(configDao) // <-- Inicialização do configDAO
+{
+    Logger::getInstance()->registrarInfo("SubsistemaDados", "Subsistema de Dados (Facade interno) inicializado.");
 }
 
 // =========================================================================
-// Método de Entrada  - Cliente do Template Method
+// Métodos de Leitura e Persistência
+// =========================================================================
+
+double SubsistemaDados::obterLeituraVolume(const std::string& idSHA) {
+    Logger::getInstance()->registrarInfo("SubsistemaDados", "Acionando Leitor de Imagem (Adapter) para SHA: " + idSHA);
+return leitorSHA->obterLeituraVolume(idSHA); 
+}
+
+void SubsistemaDados::salvarConsumo(const std::string& idSHA, double volumeLido) {
+
+// 1. OBTEM O ID DO USUÁRIO através do SHAConfigDAO (Agora configDAO está inicializado)
+ConfiguracaoSHA config = configDAO->buscarConfiguracao(idSHA);
+int idUsuario = config.idUsuario; 
+
+if (idUsuario == -1) {
+Logger::getInstance()->registrarErro("SubsistemaDados", "Falha: Nao foi possivel encontrar o idUsuario para SHA: " + idSHA);
+return;
+}
+
+// 2. CRIA o DTO que o DAO espera
+LeituraConsumo novaLeitura;
+novaLeitura.idSHA = idSHA;
+novaLeitura.volume = volumeLido;
+novaLeitura.timestamp = std::time(nullptr); 
+
+// 3. CHAMA o DAO
+if (historicoDAO->salvarLeitura(idUsuario, novaLeitura)) { 
+Logger::getInstance()->registrarInfo("SubsistemaDados", "Leitura " + std::to_string(volumeLido) + " SALVA NO DB (Usuario ID: " + std::to_string(idUsuario) + ").");
+} else {
+ Logger::getInstance()->registrarErro("SubsistemaDados", "Falha ao salvar consumo no DB.");
+}
+}
+
+
+// =========================================================================
+// Método de Entrada  - Cliente do Template Method
 // =========================================================================
 
 void SubsistemaDados::iniciarProcessamento(const std::string& idSHA, int idUsuario) {
@@ -20,11 +66,11 @@ void SubsistemaDados::iniciarProcessamento(const std::string& idSHA, int idUsuar
     Logger::getInstance()->registrarInfo("SubsistemaDados", "Acionando Template Method para SHA: " + idSHA);
     
     // 1. Cria a instância concreta do Template Method (Processador)
-    LeituraSHAProcessador processor(leitorSHA, subsistemaAlerta, historicoDAO);
+    // Construtor corrigido para passar SubsistemaDados e SubsistemaAlerta
+    LeituraSHAProcessador processor(this, subsistemaAlerta); 
     
-    // 2. Executa o fluxo fixo (Leitura -> Registro -> Alerta)
-    // Este método é herdado de FluxoProcessamentoBase e executa a sequência imutável.
-    processor.iniciar(idSHA, idUsuario); 
+    // 2. Executa o fluxo fixo (Chama o método Template)
+    processor.executarFluxo(idSHA, idUsuario); // <-- CORRIGIDO: Chamando o nome correto
 }
 
 // =========================================================================
@@ -32,13 +78,6 @@ void SubsistemaDados::iniciarProcessamento(const std::string& idSHA, int idUsuar
 // =========================================================================
 
 ConsumoDTO SubsistemaDados::monitorarConsumoUsuario(int idUsuario, std::time_t inicio, std::time_t fim) {
-    // Esta lógica deve obter a lista de SHAs do usuário (via SubsistemaUsuarios)
-    // e chamar o ConsumoHistoricoDAO para agregar os dados.
-    
-    Logger::getInstance()->registrarInfo("SubsistemaDados", "Consulta consolidada de consumo para ID: " + std::to_string(idUsuario));
-    
-    // Em um projeto real, esta linha chamaria o DAO para fazer a agregação SQL:
-    // ConsumoHistoricoDAO->agregarConsumoPorUsuario(idUsuario, inicio, fim);
-    
-    return ConsumoDTO{150.75}; // Retorno simulado
+Logger::getInstance()->registrarInfo("SubsistemaDados", "Consulta consolidada de consumo para ID: " + std::to_string(idUsuario));
+return ConsumoDTO{150.75}; // Retorno simulado
 }
