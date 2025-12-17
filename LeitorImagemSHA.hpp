@@ -3,54 +3,32 @@
 #ifndef LEITOR_IMAGEM_SHA_HPP
 #define LEITOR_IMAGEM_SHA_HPP
 
-#include "SHAConfigDAO.hpp" // Dependência para buscar o diretório da imagem no DB
+#include "SHAConfigDAO.hpp"
 #include "Logger.hpp"
-#include "InterpretadorConsumo.hpp" // Para structs Imagem e enum TipoMedidor
-#include "Entidades.hpp" // Para ConfiguracaoSHA, se necessário
+#include "Entidades.hpp" // Imagem, TipoMedidor, ConfiguracaoSHA
 
 #include <string>
 
-/**
- * @brief Implementa o Padrão Adapter para acessar a fonte externa de imagens do SHA (Restrição 1.2).
- *
- * Esta classe é responsável por:
- * 1. Obter o caminho da imagem real do DAO.
- * 2. Utilizar a biblioteca de leitura de imagem (stb_image) para extrair o volume de uma ROI (Região de Interesse).
- * 3. Traduzir o resultado para o formato esperado pelo SubsistemaDados.
- */
 class LeitorImagemSHA {
 private:
-    SHAConfigDAO* configDAO; // Injeção de Dependência
+    SHAConfigDAO* configDAO;
 
-    /**
-     * @brief Implementa a leitura de baixo nível do arquivo de imagem (BMP/PNG) para extrair o volume.
-     * Simula o processo de OCR/ROI.
-     * @param caminhoCompletoDaImagem O diretório e nome do arquivo da imagem.
-     * @return O volume lido como double.
-     */
-    double lerROIReal(const std::string& caminhoCompletoDaImagem) const; 
+    // Resolve qual arquivo de imagem deve ser lido dentro do diretório do SHA
+    std::string resolverCaminhoImagemMaisRecente(const std::string& diretorio) const;
+
+    // (Legado) leitura por pixel, só pra fallback
+    double lerROIReal(const std::string& caminhoCompletoDaImagem) const;
 
 public:
-    /**
-     * @brief Construtor que recebe a dependência do DAO de Configuração.
-     */
-    LeitorImagemSHA(SHAConfigDAO* dao);
-    virtual ~LeitorImagemSHA() = default;
+    explicit LeitorImagemSHA(SHAConfigDAO* dao);
 
-    /**
-     * @brief Método principal que o SubsistemaDados chama para obter a leitura.
-     * Orquestra o DAO e a leitura da imagem.
-     */
+    // (Legado) Mantido por compatibilidade. Ideal é usar Strategy no SubsistemaDados.
     double obterLeituraVolume(const std::string& idSHA);
 
-    /**
-     * @brief Obtém o arquivo de imagem (apenas para simulação de buffer/metadados).
-     */
+    // Adapter principal: retorna o caminho real do arquivo de imagem
     Imagem obterImagem(const std::string& idSHA);
 
-    /**
-     * @brief Determina o tipo do medidor para selecionar a Strategy (se aplicável).
-     */
+    // Heurística simples: decide Strategy (DIGITAL/ANALOGICO)
     TipoMedidor determinarTipoMedidor(const std::string& idSHA);
 };
 

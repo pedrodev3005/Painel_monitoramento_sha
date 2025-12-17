@@ -4,6 +4,8 @@
 #include "TemplateMonitoramento.hpp" // Inclui a estrutura do Template Method
 #include "Logger.hpp"
 #include <ctime>
+#include "EstrategiasOCR.hpp"
+#include <memory>
 
 
 // =========================================================================
@@ -28,7 +30,17 @@ SubsistemaDados::SubsistemaDados(
 
 double SubsistemaDados::obterLeituraVolume(const std::string& idSHA) {
     Logger::getInstance()->registrarInfo("SubsistemaDados", "Acionando Leitor de Imagem (Adapter) para SHA: " + idSHA);
-return leitorSHA->obterLeituraVolume(idSHA); 
+
+    // 1) Adapter só pega a imagem/metadados
+    Imagem img = leitorSHA->obterImagem(idSHA);
+    TipoMedidor tipo = leitorSHA->determinarTipoMedidor(idSHA);
+
+    // 2) Strategy interpreta (OCR)
+    std::unique_ptr<InterpretadorConsumo> ocr;
+    if (tipo == TipoMedidor::DIGITAL) ocr = std::make_unique<InterpretadorDigital>();
+    else                             ocr = std::make_unique<InterpretadorAnalogico>();
+
+    return ocr->interpretar(img);
 }
 
 void SubsistemaDados::salvarConsumo(const std::string& idSHA, double volumeLido) {

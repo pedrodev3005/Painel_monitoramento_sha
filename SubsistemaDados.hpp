@@ -1,37 +1,43 @@
-// SubsistemaDados.h (CORRIGIDO)
+// SubsistemaDados.hpp (ATUALIZADO)
 
-#ifndef SUBSISTEMA_DADOS_H
-#define SUBSISTEMA_DADOS_H
+#ifndef SUBSISTEMA_DADOS_HPP
+#define SUBSISTEMA_DADOS_HPP
 
-#include "LeitorImagemSHA.hpp"  // Adapter
-#include "SubsistemaAlerta.hpp"  // Subsistema para Alerta
-#include "ConsumoHistoricoDAO.hpp" // DAO para Persistência
-#include "SHAConfigDAO.hpp"        // **NOVO: Inclusão obrigatória para o membro configDAO**
+#include <string>
+#include <ctime>
 
-// Forward declarations de classes de fluxo
-class LeituraSHAProcessador; 
-struct ConsumoDTO; // Struct para retorno consolidado
+#include "LeitorImagemSHA.hpp"       // Adapter (pega caminho da imagem)
+#include "SubsistemaAlerta.hpp"      // Subsistema de alerta
+#include "ConsumoHistoricoDAO.hpp"   // DAO de histórico
+#include "SHAConfigDAO.hpp"          // DAO de configuração do SHA
+
+// (Se ConsumoDTO estiver definido em outro header incluído no projeto, ok.)
+struct ConsumoDTO;
 
 class SubsistemaDados {
 private:
-
     LeitorImagemSHA* leitorSHA;
-    SubsistemaAlerta* subsistemaAlerta; 
+    SubsistemaAlerta* subsistemaAlerta;
     ConsumoHistoricoDAO* historicoDAO;
-    SHAConfigDAO* configDAO; // Membro adicionado
+    SHAConfigDAO* configDAO;
 
 public:
+    SubsistemaDados(
+        LeitorImagemSHA* leitor,
+        SubsistemaAlerta* alerta,
+        ConsumoHistoricoDAO* dao,
+        SHAConfigDAO* configDao
+    );
 
-    SubsistemaDados(LeitorImagemSHA* leitor, SubsistemaAlerta* alerta, ConsumoHistoricoDAO* dao, SHAConfigDAO* configDao); 
-
+    // Template Method (cliente)
     void iniciarProcessamento(const std::string& idSHA, int idUsuario);
 
-
+    // Consulta consolidada (DAO)
     ConsumoDTO monitorarConsumoUsuario(int idUsuario, std::time_t inicio, std::time_t fim);
 
-    // Métodos utilitários que o Template Method chama
-    double obterLeituraVolume(const std::string& idSHA);
+    // Utilitários chamados pelo Template Method
+    double obterLeituraVolume(const std::string& idSHA);   // agora faz: Adapter -> Strategy OCR
     void salvarConsumo(const std::string& idSHA, double volumeLido);
 };
 
-#endif // SUBSISTEMA_DADOS_H
+#endif // SUBSISTEMA_DADOS_HPP
