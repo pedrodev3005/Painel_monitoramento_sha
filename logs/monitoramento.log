@@ -207,3 +207,1374 @@
 [2025-12-17 10:08:01] [INFO] [SubsistemaAlerta] Verificando limite para SHA 2 | volume=3.400000 | limite=3.000000
 [2025-12-17 10:08:01] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=2 volume=3.400000 > limite=3.000000
 [2025-12-17 10:08:01] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 3.400000 m3.
+[2025-12-17 10:23:08] [INFO] [DBConnection] Tabelas verificadas/criadas com sucesso.
+[2025-12-17 10:23:08] [INFO] [ConsumoHistoricoDAO] DAO de histórico inicializado.
+[2025-12-17 10:23:08] [INFO] [LimiteAlertaDAO] DAO de Limite de Alerta inicializado.
+[2025-12-17 10:23:08] [INFO] [SHAConfigDAO] DAO de Configuracao SHA inicializado.
+[2025-12-17 10:23:08] [INFO] [UsuarioDAOImpl] DAO de Usuários inicializado com sucesso.
+[2025-12-17 10:23:08] [INFO] [SubsistemaUsuarios] Subsistema inicializado.
+[2025-12-17 10:23:08] [INFO] [SubsistemaAlerta] Subsistema de Alerta inicializado.
+[2025-12-17 10:23:08] [INFO] [LeitorImagemSHA] Adapter inicializado (resolve caminho de imagem no diretório do SHA).
+[2025-12-17 10:23:08] [INFO] [SubsistemaDados] Subsistema de Dados (Facade interno) inicializado.
+[2025-12-17 10:23:08] [INFO] [MonitoramentoFacade] Fachada inicializada. Arquitetura pronta.
+[2025-12-17 10:23:49] [INFO] [SHAConfigDAO] Configuracao SHA 3 SALVA/ATUALIZADA no DB.
+[2025-12-17 10:23:56] [INFO] [SHAConfigDAO] Simulando SELECT de todos os SHAs ativos...
+[2025-12-17 10:25:15] [INFO] [SHAConfigDAO] Configuracao SHA 4 SALVA/ATUALIZADA no DB.
+[2025-12-17 10:25:39] [INFO] [SHAConfigDAO] Configuracao SHA 5 SALVA/ATUALIZADA no DB.
+[2025-12-17 10:26:31] [INFO] [LimiteAlertaDAO] Limite de 10.000000m³ SALVO/ATUALIZADO para SHA 3 (Usuario 1).
+[2025-12-17 10:26:47] [INFO] [LimiteAlertaDAO] Limite de 12.000000m³ SALVO/ATUALIZADO para SHA 4 (Usuario 1).
+[2025-12-17 10:27:11] [INFO] [LimiteAlertaDAO] Limite de 13.000000m³ SALVO/ATUALIZADO para SHA 2 (Usuario 1).
+[2025-12-17 10:27:35] [INFO] [MonitoramentoFacade] Solicitando criacao de usuario...
+[2025-12-17 10:27:35] [ERROR] [SubsistemaUsuarios] CPF invalido para criacao.
+[2025-12-17 10:27:53] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:27:53] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:27:53] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:27:53] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:27:53] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:27:53] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:27:53] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:27:53] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:27:53] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:27:53] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:27:53] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:27:58] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:27:58] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:27:58] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:27:58] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:27:58] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:27:58] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:27:58] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:27:58] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:27:58] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:27:58] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:27:58] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:03] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:03] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:03] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:03] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:03] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:03] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:03] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:03] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:03] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:03] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:03] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:08] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:08] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:08] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:08] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:08] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:08] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:08] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:08] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:08] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:08] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:08] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:08] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:08] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:08] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:08] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:08] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:08] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:08] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:08] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:08] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:08] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:08] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:13] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:13] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:13] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:13] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:13] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:13] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:13] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:13] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:13] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:13] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:13] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:13] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:13] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:13] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:13] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:13] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:13] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:13] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:13] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:13] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:13] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:13] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:18] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:18] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:18] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:18] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:18] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:18] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:18] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:18] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:18] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:18] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:18] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:18] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:18] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:18] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:18] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:18] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:18] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:18] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:18] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:18] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:18] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:18] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:23] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:23] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:23] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:23] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:23] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:23] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:23] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:23] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:23] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:23] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:23] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:23] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:23] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:23] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:23] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:23] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:23] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:23] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:23] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:23] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:23] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:23] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:28] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:28] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:28] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:28] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:28] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:28] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:28] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:28] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:28] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:28] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:28] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:28] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:28] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:28] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:28] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:28] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:28] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:28] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:28] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:28] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:28] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:28] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:33] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:33] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:33] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:33] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:33] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:33] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:33] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:33] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:33] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:33] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:33] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:33] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:33] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:33] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:33] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:33] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:33] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:33] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:33] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:33] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:33] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:33] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:33] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:33] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:28:33] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:33] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:28:33] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:28:33] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3
+[2025-12-17 10:28:33] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:33] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:33] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:33] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:33] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:38] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:38] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:38] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:38] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:38] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:38] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:38] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:38] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:38] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:38] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:38] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:38] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:38] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:38] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:38] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:38] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:38] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:38] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:38] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:38] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:38] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:38] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:38] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:38] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:28:38] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:38] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:28:38] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:28:38] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3
+[2025-12-17 10:28:38] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:38] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:38] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:38] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:38] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:43] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:43] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:43] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:43] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:43] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:43] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:43] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:43] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:43] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:43] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:43] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:43] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:43] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:43] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:43] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:43] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:43] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:43] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:43] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:43] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:43] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:43] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:43] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:43] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:28:43] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:43] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:28:43] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:28:43] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3
+[2025-12-17 10:28:43] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:43] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:43] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:43] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:43] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:48] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:48] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:48] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:48] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:48] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:48] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:48] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:48] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:48] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:48] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:48] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:48] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:48] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:48] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:48] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:48] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:48] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:48] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:48] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:48] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:48] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:48] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:48] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:48] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:28:48] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:48] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:28:48] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:28:48] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3
+[2025-12-17 10:28:48] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:48] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:48] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:48] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:48] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:53] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:53] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:53] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:53] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:53] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:53] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:53] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:53] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:53] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:53] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:53] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:53] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:53] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:53] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:53] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:53] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:53] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:53] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:53] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:53] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:53] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:53] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:53] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:53] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:28:53] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:53] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:28:53] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:28:53] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3
+[2025-12-17 10:28:53] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:53] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:53] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:53] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:53] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:56] [INFO] [LimiteAlertaDAO] Limite de 16.000000m³ SALVO/ATUALIZADO para SHA 5 (Usuario 1).
+[2025-12-17 10:28:58] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:58] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:28:58] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:58] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:28:58] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:28:58] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1
+[2025-12-17 10:28:58] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:58] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\leitura_hidrometro.bmp
+[2025-12-17 10:28:58] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:58] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:58] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:58] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:58] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:28:58] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:58] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:28:58] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:28:58] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2
+[2025-12-17 10:28:58] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:58] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\leitura_hidrometro.bmp
+[2025-12-17 10:28:58] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:58] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:58] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:28:58] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:28:58] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:28:58] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:28:58] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:28:58] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:28:58] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3
+[2025-12-17 10:28:58] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:58] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\leitura_hidrometro.bmp
+[2025-12-17 10:28:58] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:28:58] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:28:58] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:29:03] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:03] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:03] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:03] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:03] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:03] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_0.bmp
+[2025-12-17 10:29:03] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_0.bmp
+[2025-12-17 10:29:03] [INFO] [Strategy:Digital] Templates carregados de: templates/digital/
+[2025-12-17 10:29:03] [INFO] [Strategy:Digital] Leitura extraída (m3): 0000.55
+[2025-12-17 10:29:03] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:03] [INFO] [SubsistemaDados] Leitura 0.550000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:03] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:03] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=0.550000 | limite=10.000000
+[2025-12-17 10:29:03] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.550000 m3.
+[2025-12-17 10:29:03] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:03] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:03] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:03] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:03] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:03] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_0.bmp
+[2025-12-17 10:29:03] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_0.bmp
+[2025-12-17 10:29:03] [INFO] [Strategy:Digital] Leitura extraída (m3): 0000.57
+[2025-12-17 10:29:03] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:03] [INFO] [SubsistemaDados] Leitura 0.570000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:03] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:03] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=0.570000 | limite=12.000000
+[2025-12-17 10:29:03] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.570000 m3.
+[2025-12-17 10:29:03] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:03] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:03] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:03] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:03] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:03] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_0.bmp
+[2025-12-17 10:29:03] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_0.bmp
+[2025-12-17 10:29:03] [INFO] [Strategy:Digital] Leitura extraída (m3): 0000.80
+[2025-12-17 10:29:03] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:03] [INFO] [SubsistemaDados] Leitura 0.800000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:03] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:03] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=0.800000 | limite=16.000000
+[2025-12-17 10:29:03] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.800000 m3.
+[2025-12-17 10:29:08] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:08] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:08] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:08] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:08] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:08] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_2.bmp
+[2025-12-17 10:29:08] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_2.bmp
+[2025-12-17 10:29:08] [INFO] [Strategy:Digital] Leitura extraída (m3): 0003.50
+[2025-12-17 10:29:08] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:08] [INFO] [SubsistemaDados] Leitura 3.500000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:08] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:08] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=3.500000 | limite=10.000000
+[2025-12-17 10:29:08] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 3.500000 m3.
+[2025-12-17 10:29:08] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:08] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:08] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:08] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:08] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:08] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_2.bmp
+[2025-12-17 10:29:08] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_2.bmp
+[2025-12-17 10:29:08] [INFO] [Strategy:Digital] Leitura extraída (m3): 0003.33
+[2025-12-17 10:29:08] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:08] [INFO] [SubsistemaDados] Leitura 3.330000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:08] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:08] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=3.330000 | limite=12.000000
+[2025-12-17 10:29:08] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 3.330000 m3.
+[2025-12-17 10:29:08] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:08] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:08] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:08] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:08] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:08] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_2.bmp
+[2025-12-17 10:29:08] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_2.bmp
+[2025-12-17 10:29:09] [INFO] [Strategy:Digital] Leitura extraída (m3): 0003.55
+[2025-12-17 10:29:09] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:09] [INFO] [SubsistemaDados] Leitura 3.550000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:09] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:09] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=3.550000 | limite=16.000000
+[2025-12-17 10:29:09] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 3.550000 m3.
+[2025-12-17 10:29:14] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:14] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:14] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:14] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:14] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:14] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_4.bmp
+[2025-12-17 10:29:14] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_4.bmp
+[2025-12-17 10:29:14] [INFO] [Strategy:Digital] Leitura extraída (m3): 0004.37
+[2025-12-17 10:29:14] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:14] [INFO] [SubsistemaDados] Leitura 4.370000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:14] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:14] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=4.370000 | limite=10.000000
+[2025-12-17 10:29:14] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 4.370000 m3.
+[2025-12-17 10:29:14] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:14] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:14] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:14] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:14] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:14] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_3.bmp
+[2025-12-17 10:29:14] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_3.bmp
+[2025-12-17 10:29:14] [INFO] [Strategy:Digital] Leitura extraída (m3): 0003.90
+[2025-12-17 10:29:14] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:14] [INFO] [SubsistemaDados] Leitura 3.900000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:14] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:14] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=3.900000 | limite=12.000000
+[2025-12-17 10:29:14] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 3.900000 m3.
+[2025-12-17 10:29:14] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:14] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:14] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:14] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:14] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:14] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_4.bmp
+[2025-12-17 10:29:14] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_4.bmp
+[2025-12-17 10:29:14] [INFO] [Strategy:Digital] Leitura extraída (m3): 0004.33
+[2025-12-17 10:29:14] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:14] [INFO] [SubsistemaDados] Leitura 4.330000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:14] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:14] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=4.330000 | limite=16.000000
+[2025-12-17 10:29:14] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 4.330000 m3.
+[2025-12-17 10:29:19] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:19] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:19] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:19] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:19] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:19] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_6.bmp
+[2025-12-17 10:29:19] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_6.bmp
+[2025-12-17 10:29:19] [INFO] [Strategy:Digital] Leitura extraída (m3): 0008.37
+[2025-12-17 10:29:19] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:19] [INFO] [SubsistemaDados] Leitura 8.370000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:19] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:19] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=8.370000 | limite=10.000000
+[2025-12-17 10:29:19] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 8.370000 m3.
+[2025-12-17 10:29:19] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:19] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:19] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:19] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:19] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:19] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_6.bmp
+[2025-12-17 10:29:19] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_6.bmp
+[2025-12-17 10:29:19] [INFO] [Strategy:Digital] Leitura extraída (m3): 0008.10
+[2025-12-17 10:29:19] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:19] [INFO] [SubsistemaDados] Leitura 8.100000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:19] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:19] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=8.100000 | limite=12.000000
+[2025-12-17 10:29:19] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 8.100000 m3.
+[2025-12-17 10:29:19] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:19] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:19] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:19] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:19] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:19] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_6.bmp
+[2025-12-17 10:29:19] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_6.bmp
+[2025-12-17 10:29:19] [INFO] [Strategy:Digital] Leitura extraída (m3): 0008.33
+[2025-12-17 10:29:19] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:19] [INFO] [SubsistemaDados] Leitura 8.330000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:19] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:19] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=8.330000 | limite=16.000000
+[2025-12-17 10:29:19] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 8.330000 m3.
+[2025-12-17 10:29:24] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:24] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:24] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:24] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:24] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:24] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_7.bmp
+[2025-12-17 10:29:24] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_7.bmp
+[2025-12-17 10:29:24] [INFO] [Strategy:Digital] Leitura extraída (m3): 0007.87
+[2025-12-17 10:29:24] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:24] [INFO] [SubsistemaDados] Leitura 7.870000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:24] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:24] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=7.870000 | limite=10.000000
+[2025-12-17 10:29:24] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 7.870000 m3.
+[2025-12-17 10:29:24] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:24] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:24] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:24] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:24] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:24] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_7.bmp
+[2025-12-17 10:29:24] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_7.bmp
+[2025-12-17 10:29:24] [INFO] [Strategy:Digital] Leitura extraída (m3): 0007.90
+[2025-12-17 10:29:24] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:24] [INFO] [SubsistemaDados] Leitura 7.900000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:24] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:24] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=7.900000 | limite=12.000000
+[2025-12-17 10:29:24] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 7.900000 m3.
+[2025-12-17 10:29:24] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:24] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:24] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:24] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:24] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:24] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_8.bmp
+[2025-12-17 10:29:24] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_8.bmp
+[2025-12-17 10:29:24] [INFO] [Strategy:Digital] Leitura extraída (m3): 0008.13
+[2025-12-17 10:29:24] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:24] [INFO] [SubsistemaDados] Leitura 8.130000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:24] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:24] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=8.130000 | limite=16.000000
+[2025-12-17 10:29:24] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 8.130000 m3.
+[2025-12-17 10:29:29] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:29] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:29] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:29] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:29] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:29] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_10.bmp
+[2025-12-17 10:29:29] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_10.bmp
+[2025-12-17 10:29:29] [INFO] [Strategy:Digital] Leitura extraída (m3): 0010.05
+[2025-12-17 10:29:29] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:29] [INFO] [SubsistemaDados] Leitura 10.050000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:29] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:29] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=10.050000 | limite=10.000000
+[2025-12-17 10:29:29] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=3 volume=10.050000 > limite=10.000000
+[2025-12-17 10:29:29] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 10.050000 m3.
+[2025-12-17 10:29:29] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:29] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:29] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:29] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:29] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:29] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_9.bmp
+[2025-12-17 10:29:29] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_9.bmp
+[2025-12-17 10:29:29] [INFO] [Strategy:Digital] Leitura extraída (m3): 0009.87
+[2025-12-17 10:29:29] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:29] [INFO] [SubsistemaDados] Leitura 9.870000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:29] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:29] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=9.870000 | limite=12.000000
+[2025-12-17 10:29:29] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 9.870000 m3.
+[2025-12-17 10:29:29] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:29] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:29] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:29] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:29] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:29] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_10.bmp
+[2025-12-17 10:29:29] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_10.bmp
+[2025-12-17 10:29:29] [INFO] [Strategy:Digital] Leitura extraída (m3): 0010.10
+[2025-12-17 10:29:29] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:29] [INFO] [SubsistemaDados] Leitura 10.100000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:29] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:29] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=10.100000 | limite=16.000000
+[2025-12-17 10:29:29] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 10.100000 m3.
+[2025-12-17 10:29:34] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:34] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:34] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:34] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:34] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:34] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_11.bmp
+[2025-12-17 10:29:34] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_11.bmp
+[2025-12-17 10:29:34] [ERROR] [Strategy:Digital] Não consegui detectar 5 separadores. Vou cair no split fixo (pode errar).
+[2025-12-17 10:29:34] [INFO] [Strategy:Digital] Leitura extraída (m3): 6666.66
+[2025-12-17 10:29:34] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:34] [INFO] [SubsistemaDados] Leitura 6666.660000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:34] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:34] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=6666.660000 | limite=10.000000
+[2025-12-17 10:29:34] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=3 volume=6666.660000 > limite=10.000000
+[2025-12-17 10:29:34] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 6666.660000 m3.
+[2025-12-17 10:29:34] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:34] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:34] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:34] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:34] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:34] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_11.bmp
+[2025-12-17 10:29:34] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_11.bmp
+[2025-12-17 10:29:34] [INFO] [Strategy:Digital] Leitura extraída (m3): 0011.73
+[2025-12-17 10:29:34] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:34] [INFO] [SubsistemaDados] Leitura 11.730000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:34] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:34] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=11.730000 | limite=12.000000
+[2025-12-17 10:29:34] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 11.730000 m3.
+[2025-12-17 10:29:34] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:34] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:34] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:34] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:34] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:34] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_11.bmp
+[2025-12-17 10:29:34] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_11.bmp
+[2025-12-17 10:29:34] [INFO] [Strategy:Digital] Leitura extraída (m3): 0011.90
+[2025-12-17 10:29:34] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:34] [INFO] [SubsistemaDados] Leitura 11.900000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:34] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:34] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=11.900000 | limite=16.000000
+[2025-12-17 10:29:34] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 11.900000 m3.
+[2025-12-17 10:29:39] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:39] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:39] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:39] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:39] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:39] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_13.bmp
+[2025-12-17 10:29:39] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_13.bmp
+[2025-12-17 10:29:39] [INFO] [Strategy:Digital] Leitura extraída (m3): 0013.50
+[2025-12-17 10:29:39] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:39] [INFO] [SubsistemaDados] Leitura 13.500000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:39] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:39] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=13.500000 | limite=10.000000
+[2025-12-17 10:29:39] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=3 volume=13.500000 > limite=10.000000
+[2025-12-17 10:29:39] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 13.500000 m3.
+[2025-12-17 10:29:39] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:39] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:39] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:39] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:39] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:39] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_13.bmp
+[2025-12-17 10:29:39] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_13.bmp
+[2025-12-17 10:29:39] [INFO] [Strategy:Digital] Leitura extraída (m3): 0013.43
+[2025-12-17 10:29:39] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:39] [INFO] [SubsistemaDados] Leitura 13.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:39] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:39] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=13.430000 | limite=12.000000
+[2025-12-17 10:29:39] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=4 volume=13.430000 > limite=12.000000
+[2025-12-17 10:29:39] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 13.430000 m3.
+[2025-12-17 10:29:39] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:39] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:39] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:39] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:39] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:39] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_13.bmp
+[2025-12-17 10:29:39] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_13.bmp
+[2025-12-17 10:29:40] [INFO] [Strategy:Digital] Leitura extraída (m3): 0013.90
+[2025-12-17 10:29:40] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:40] [INFO] [SubsistemaDados] Leitura 13.900000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:40] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:40] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=13.900000 | limite=16.000000
+[2025-12-17 10:29:40] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 13.900000 m3.
+[2025-12-17 10:29:45] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:45] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:45] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:45] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:45] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:45] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_15.bmp
+[2025-12-17 10:29:45] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_15.bmp
+[2025-12-17 10:29:45] [INFO] [Strategy:Digital] Leitura extraída (m3): 0015.47
+[2025-12-17 10:29:45] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:45] [INFO] [SubsistemaDados] Leitura 15.470000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:45] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:45] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=15.470000 | limite=10.000000
+[2025-12-17 10:29:45] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=3 volume=15.470000 > limite=10.000000
+[2025-12-17 10:29:45] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 15.470000 m3.
+[2025-12-17 10:29:45] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:45] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:45] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:45] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:45] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:45] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_15.bmp
+[2025-12-17 10:29:45] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_15.bmp
+[2025-12-17 10:29:45] [INFO] [Strategy:Digital] Leitura extraída (m3): 0015.43
+[2025-12-17 10:29:45] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:45] [INFO] [SubsistemaDados] Leitura 15.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:45] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:45] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=15.430000 | limite=12.000000
+[2025-12-17 10:29:45] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=4 volume=15.430000 > limite=12.000000
+[2025-12-17 10:29:45] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 15.430000 m3.
+[2025-12-17 10:29:45] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:45] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:45] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:45] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:45] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:45] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_15.bmp
+[2025-12-17 10:29:45] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_15.bmp
+[2025-12-17 10:29:45] [INFO] [Strategy:Digital] Leitura extraída (m3): 0015.70
+[2025-12-17 10:29:45] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:45] [INFO] [SubsistemaDados] Leitura 15.700000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:45] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:45] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=15.700000 | limite=16.000000
+[2025-12-17 10:29:45] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 15.700000 m3.
+[2025-12-17 10:29:50] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:50] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:50] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:50] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:50] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:50] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_17.bmp
+[2025-12-17 10:29:50] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_17.bmp
+[2025-12-17 10:29:50] [INFO] [Strategy:Digital] Leitura extraída (m3): 0017.33
+[2025-12-17 10:29:50] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:50] [INFO] [SubsistemaDados] Leitura 17.330000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:50] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:50] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=17.330000 | limite=10.000000
+[2025-12-17 10:29:50] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=3 volume=17.330000 > limite=10.000000
+[2025-12-17 10:29:50] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 17.330000 m3.
+[2025-12-17 10:29:50] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:50] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:50] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:50] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:50] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:50] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_17.bmp
+[2025-12-17 10:29:50] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_17.bmp
+[2025-12-17 10:29:50] [INFO] [Strategy:Digital] Leitura extraída (m3): 0017.33
+[2025-12-17 10:29:50] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:50] [INFO] [SubsistemaDados] Leitura 17.330000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:50] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:50] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=17.330000 | limite=12.000000
+[2025-12-17 10:29:50] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=4 volume=17.330000 > limite=12.000000
+[2025-12-17 10:29:50] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 17.330000 m3.
+[2025-12-17 10:29:50] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:50] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:50] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:50] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:50] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:50] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_17.bmp
+[2025-12-17 10:29:50] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_17.bmp
+[2025-12-17 10:29:50] [INFO] [Strategy:Digital] Leitura extraída (m3): 0017.87
+[2025-12-17 10:29:50] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:50] [INFO] [SubsistemaDados] Leitura 17.870000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:50] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:50] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=17.870000 | limite=16.000000
+[2025-12-17 10:29:50] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=5 volume=17.870000 > limite=16.000000
+[2025-12-17 10:29:50] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 17.870000 m3.
+[2025-12-17 10:29:55] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 3 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:55] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 3
+[2025-12-17 10:29:55] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:55] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 3
+[2025-12-17 10:29:55] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 3
+[2025-12-17 10:29:55] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_19.bmp
+[2025-12-17 10:29:55] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_19.bmp
+[2025-12-17 10:29:55] [INFO] [Strategy:Digital] Leitura extraída (m3): 0019.33
+[2025-12-17 10:29:55] [INFO] [ConsumoHistoricoDAO] Leitura 3 SALVA NO DB.
+[2025-12-17 10:29:55] [INFO] [SubsistemaDados] Leitura 19.330000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:55] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 3.
+[2025-12-17 10:29:55] [INFO] [SubsistemaAlerta] Verificando limite para SHA 3 | volume=19.330000 | limite=10.000000
+[2025-12-17 10:29:55] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=3 volume=19.330000 > limite=10.000000
+[2025-12-17 10:29:55] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 19.330000 m3.
+[2025-12-17 10:29:55] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:55] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:29:55] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:55] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:29:55] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:29:55] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_19.bmp
+[2025-12-17 10:29:55] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_19.bmp
+[2025-12-17 10:29:55] [INFO] [Strategy:Digital] Leitura extraída (m3): 0019.33
+[2025-12-17 10:29:55] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:29:55] [INFO] [SubsistemaDados] Leitura 19.330000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:55] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:29:55] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=19.330000 | limite=12.000000
+[2025-12-17 10:29:55] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=4 volume=19.330000 > limite=12.000000
+[2025-12-17 10:29:55] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 19.330000 m3.
+[2025-12-17 10:29:55] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:29:55] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:29:55] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:29:55] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:29:55] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:29:55] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_19.bmp
+[2025-12-17 10:29:55] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_19.bmp
+[2025-12-17 10:29:55] [INFO] [Strategy:Digital] Leitura extraída (m3): 0019.47
+[2025-12-17 10:29:55] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:29:55] [INFO] [SubsistemaDados] Leitura 19.470000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:29:55] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:29:55] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=19.470000 | limite=16.000000
+[2025-12-17 10:29:55] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=5 volume=19.470000 > limite=16.000000
+[2025-12-17 10:29:55] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 19.470000 m3.
+[2025-12-17 10:30:00] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:30:00] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:30:00] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:30:00] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:30:00] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:30:00] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_21.bmp
+[2025-12-17 10:30:00] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_21.bmp
+[2025-12-17 10:30:00] [INFO] [Strategy:Digital] Leitura extraída (m3): 0031.03
+[2025-12-17 10:30:00] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:30:00] [INFO] [SubsistemaDados] Leitura 31.030000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:30:00] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:30:00] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=31.030000 | limite=12.000000
+[2025-12-17 10:30:00] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=4 volume=31.030000 > limite=12.000000
+[2025-12-17 10:30:00] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 31.030000 m3.
+[2025-12-17 10:30:00] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:30:00] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:30:00] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:30:00] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:30:00] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:30:00] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_21.bmp
+[2025-12-17 10:30:00] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_21.bmp
+[2025-12-17 10:30:00] [INFO] [Strategy:Digital] Leitura extraída (m3): 0031.47
+[2025-12-17 10:30:00] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:30:00] [INFO] [SubsistemaDados] Leitura 31.470000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:30:00] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:30:00] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=31.470000 | limite=16.000000
+[2025-12-17 10:30:00] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=5 volume=31.470000 > limite=16.000000
+[2025-12-17 10:30:00] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 31.470000 m3.
+[2025-12-17 10:30:05] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:30:05] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:30:05] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:30:05] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:30:05] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:30:05] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_22.bmp
+[2025-12-17 10:30:05] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_22.bmp
+[2025-12-17 10:30:05] [INFO] [Strategy:Digital] Leitura extraída (m3): 0033.00
+[2025-12-17 10:30:05] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:30:05] [INFO] [SubsistemaDados] Leitura 33.000000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:30:05] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:30:05] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=33.000000 | limite=12.000000
+[2025-12-17 10:30:05] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=4 volume=33.000000 > limite=12.000000
+[2025-12-17 10:30:05] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 33.000000 m3.
+[2025-12-17 10:30:05] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:30:05] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:30:05] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:30:05] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:30:05] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:30:05] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_23.bmp
+[2025-12-17 10:30:05] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_23.bmp
+[2025-12-17 10:30:05] [INFO] [Strategy:Digital] Leitura extraída (m3): 0033.35
+[2025-12-17 10:30:05] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:30:05] [INFO] [SubsistemaDados] Leitura 33.350000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:30:05] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:30:05] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=33.350000 | limite=16.000000
+[2025-12-17 10:30:05] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=5 volume=33.350000 > limite=16.000000
+[2025-12-17 10:30:05] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 33.350000 m3.
+[2025-12-17 10:30:10] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 4 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:30:10] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 4
+[2025-12-17 10:30:10] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:30:10] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 4
+[2025-12-17 10:30:10] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 4
+[2025-12-17 10:30:10] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_24.bmp
+[2025-12-17 10:30:10] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_2\hidrometro_24.bmp
+[2025-12-17 10:30:10] [INFO] [Strategy:Digital] Leitura extraída (m3): 0034.70
+[2025-12-17 10:30:10] [INFO] [ConsumoHistoricoDAO] Leitura 4 SALVA NO DB.
+[2025-12-17 10:30:10] [INFO] [SubsistemaDados] Leitura 34.700000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:30:10] [INFO] [LimiteAlertaDAO] Limite 12.000000 m³ buscado para SHA 4.
+[2025-12-17 10:30:10] [INFO] [SubsistemaAlerta] Verificando limite para SHA 4 | volume=34.700000 | limite=12.000000
+[2025-12-17 10:30:10] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=4 volume=34.700000 > limite=12.000000
+[2025-12-17 10:30:10] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 34.700000 m3.
+[2025-12-17 10:30:10] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 5 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:30:10] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 5
+[2025-12-17 10:30:10] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:30:10] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 5
+[2025-12-17 10:30:10] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 5
+[2025-12-17 10:30:10] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_25.bmp
+[2025-12-17 10:30:10] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_3\hidrometro_25.bmp
+[2025-12-17 10:30:10] [INFO] [Strategy:Digital] Leitura extraída (m3): 0035.35
+[2025-12-17 10:30:10] [INFO] [ConsumoHistoricoDAO] Leitura 5 SALVA NO DB.
+[2025-12-17 10:30:10] [INFO] [SubsistemaDados] Leitura 35.350000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:30:10] [INFO] [LimiteAlertaDAO] Limite 16.000000 m³ buscado para SHA 5.
+[2025-12-17 10:30:10] [INFO] [SubsistemaAlerta] Verificando limite para SHA 5 | volume=35.350000 | limite=16.000000
+[2025-12-17 10:30:10] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=5 volume=35.350000 > limite=16.000000
+[2025-12-17 10:30:10] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 35.350000 m3.
+[2025-12-17 10:47:23] [INFO] [MonitoramentoFacade] Solicitando consolidacao de consumo (RF 2.3).
+[2025-12-17 10:47:23] [INFO] [SubsistemaDados] Consulta consolidada de consumo para ID: 1
+[2025-12-17 10:48:53] [INFO] [DBConnection] Conexao com DB fechada.
+[2025-12-17 10:49:14] [INFO] [DBConnection] Tabelas verificadas/criadas com sucesso.
+[2025-12-17 10:49:14] [INFO] [ConsumoHistoricoDAO] DAO de histórico inicializado.
+[2025-12-17 10:49:14] [INFO] [LimiteAlertaDAO] DAO de Limite de Alerta inicializado.
+[2025-12-17 10:49:14] [INFO] [SHAConfigDAO] DAO de Configuracao SHA inicializado.
+[2025-12-17 10:49:14] [INFO] [UsuarioDAOImpl] DAO de Usuários inicializado com sucesso.
+[2025-12-17 10:49:14] [INFO] [SubsistemaUsuarios] Subsistema inicializado.
+[2025-12-17 10:49:14] [INFO] [SubsistemaAlerta] Subsistema de Alerta inicializado.
+[2025-12-17 10:49:14] [INFO] [LeitorImagemSHA] Adapter inicializado (resolve caminho de imagem no diretório do SHA).
+[2025-12-17 10:49:14] [INFO] [SubsistemaDados] Subsistema de Dados (Facade interno) inicializado.
+[2025-12-17 10:49:14] [INFO] [MonitoramentoFacade] Fachada inicializada. Arquitetura pronta.
+[2025-12-17 10:49:38] [INFO] [MonitoramentoFacade] Solicitando criacao de usuario...
+[2025-12-17 10:49:38] [CRITICAL] [UsuarioDAOImpl] Usuario gilson salvo com sucesso. <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:49:38] [CRITICAL] [SubsistemaUsuarios] NOVO USUARIO CRIADO: gilson <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:50:01] [INFO] [LimiteAlertaDAO] Limite de 10.000000m³ SALVO/ATUALIZADO para SHA 2 (Usuario 1).
+[2025-12-17 10:50:09] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:50:09] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:50:09] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:50:09] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:50:09] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:50:09] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_4.bmp
+[2025-12-17 10:50:09] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_4.bmp
+[2025-12-17 10:50:09] [INFO] [Strategy:Digital] Templates carregados de: templates/digital/
+[2025-12-17 10:50:09] [INFO] [Strategy:Digital] Leitura extraída (m3): 0004.77
+[2025-12-17 10:50:09] [INFO] [ConsumoHistoricoDAO] Leitura 2 SALVA NO DB.
+[2025-12-17 10:50:09] [INFO] [SubsistemaDados] Leitura 4.770000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:50:09] [INFO] [LimiteAlertaDAO] Limite 10.000000 m³ buscado para SHA 2.
+[2025-12-17 10:50:09] [INFO] [SubsistemaAlerta] Verificando limite para SHA 2 | volume=4.770000 | limite=10.000000
+[2025-12-17 10:50:09] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 4.770000 m3.
+[2025-12-17 10:50:20] [INFO] [SHAConfigDAO] Simulando SELECT de todos os SHAs ativos...
+[2025-12-17 10:51:03] [INFO] [DBConnection] Conexao com DB fechada.
+[2025-12-17 11:04:34] [INFO] [DBConnection] Tabelas verificadas/criadas com sucesso.
+[2025-12-17 11:04:34] [INFO] [ConsumoHistoricoDAO] DAO de histórico inicializado.
+[2025-12-17 11:04:34] [INFO] [LimiteAlertaDAO] DAO de Limite de Alerta inicializado.
+[2025-12-17 11:04:34] [INFO] [SHAConfigDAO] DAO de Configuracao SHA inicializado.
+[2025-12-17 11:04:34] [INFO] [UsuarioDAOImpl] DAO de Usuários inicializado com sucesso.
+[2025-12-17 11:04:34] [INFO] [SubsistemaUsuarios] Subsistema inicializado.
+[2025-12-17 11:04:34] [INFO] [SubsistemaAlerta] Subsistema de Alerta inicializado.
+[2025-12-17 11:04:34] [INFO] [LeitorImagemSHA] Adapter inicializado (resolve caminho de imagem no diretório do SHA).
+[2025-12-17 11:04:34] [INFO] [SubsistemaDados] Subsistema de Dados (Facade interno) inicializado.
+[2025-12-17 11:04:34] [INFO] [MonitoramentoFacade] Fachada inicializada. Arquitetura pronta.
+[2025-12-17 11:04:39] [INFO] [SHAConfigDAO] Simulando SELECT de todos os SHAs ativos...
+[2025-12-17 11:05:08] [INFO] [SHAConfigDAO] Configuracao SHA 1 SALVA/ATUALIZADA no DB.
+[2025-12-17 11:05:13] [INFO] [SHAConfigDAO] Simulando SELECT de todos os SHAs ativos...
+[2025-12-17 11:05:24] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:05:24] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:05:24] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:05:24] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:05:24] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:05:24] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:05:24] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:05:24] [INFO] [Strategy:Digital] Templates carregados de: templates/digital/
+[2025-12-17 11:05:24] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:05:24] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:05:24] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:05:24] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:05:24] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:05:24] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:05:28] [INFO] [SHAConfigDAO] Simulando SELECT de todos os SHAs ativos...
+[2025-12-17 11:06:24] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:06:24] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:06:24] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:06:24] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:06:24] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:06:24] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:24] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:24] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:06:24] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:06:24] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:06:24] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:06:24] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:06:24] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:06:26] [INFO] [SHAConfigDAO] Simulando SELECT de todos os SHAs ativos...
+[2025-12-17 11:06:29] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:06:29] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:06:29] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:06:29] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:06:29] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:06:29] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:29] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:29] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:06:29] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:06:29] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:06:29] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:06:29] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:06:29] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:06:35] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:06:35] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:06:35] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:06:35] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:06:35] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:06:35] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:35] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:35] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:06:35] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:06:35] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:06:35] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:06:35] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:06:35] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:06:40] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:06:40] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:06:40] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:06:40] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:06:40] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:06:40] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:40] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:40] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:06:40] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:06:40] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:06:40] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:06:40] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:06:40] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:06:45] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:06:45] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:06:45] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:06:45] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:06:45] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:06:45] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:45] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:45] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:06:45] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:06:45] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:06:45] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:06:45] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:06:45] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:06:50] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:06:50] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:06:50] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:06:50] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:06:50] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:06:50] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:50] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:50] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:06:50] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:06:50] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:06:50] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:06:50] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:06:50] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:06:55] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:06:55] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:06:55] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:06:55] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:06:55] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:06:55] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:55] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:06:55] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:06:55] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:06:55] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:06:55] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:06:55] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:06:55] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:00] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:00] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:00] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:00] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:00] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:00] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:00] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:00] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:00] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:00] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:00] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:00] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:00] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:05] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:05] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:05] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:05] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:05] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:05] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:05] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:05] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:05] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:05] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:05] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:05] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:05] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:10] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:10] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:10] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:10] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:10] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:10] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:10] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:10] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:10] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:10] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:10] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:10] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:10] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:15] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:15] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:15] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:15] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:15] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:15] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:15] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:15] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:15] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:15] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:15] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:15] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:15] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:20] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:20] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:20] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:20] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:20] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:20] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:20] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:20] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:20] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:20] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:20] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:20] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:20] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:25] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:25] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:25] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:25] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:25] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:25] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:25] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:25] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:25] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:25] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:25] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:25] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:25] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:30] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:30] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:30] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:30] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:30] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:30] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:30] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:30] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:30] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:30] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:30] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:30] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:30] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:35] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:35] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:35] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:35] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:35] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:35] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:35] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:35] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:35] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:35] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:35] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:35] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:35] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:40] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:40] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:40] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:40] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:40] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:40] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:40] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:40] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:40] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:40] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:40] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:40] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:40] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:45] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:45] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:45] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:45] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:45] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:45] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:45] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:45] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:45] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:45] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:45] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:45] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:45] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:50] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:50] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:50] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:50] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:50] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:50] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:50] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:50] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:50] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:50] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:50] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:50] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:50] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:07:56] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:07:56] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:07:56] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:07:56] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:07:56] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:07:56] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:56] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:07:56] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:07:56] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:07:56] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:07:56] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:07:56] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:07:56] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:01] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:01] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:01] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:01] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:01] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:01] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:01] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:01] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:01] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:01] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:01] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:01] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:01] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:06] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:06] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:06] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:06] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:06] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:06] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:06] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:06] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:06] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:06] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:06] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:06] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:06] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:11] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:11] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:11] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:11] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:11] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:11] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:11] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:11] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:11] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:11] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:11] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:11] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:11] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:16] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:16] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:16] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:16] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:16] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:16] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:16] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:16] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:16] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:16] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:16] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:16] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:16] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:21] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:21] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:21] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:21] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:21] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:21] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:21] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:21] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:21] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:21] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:21] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:21] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:21] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:26] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:26] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:26] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:26] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:26] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:26] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:26] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:26] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:26] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:26] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:26] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:26] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:26] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:31] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:31] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:31] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:31] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:31] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:31] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:31] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:31] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:31] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:31] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:31] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:31] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:31] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:36] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:36] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:36] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:36] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:36] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:36] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:36] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:36] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:36] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:36] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:36] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:36] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:36] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:41] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:41] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:41] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:41] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:41] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:41] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:41] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:41] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:41] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:41] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:41] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:41] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:41] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:46] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:46] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:46] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:46] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:46] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:46] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:46] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:46] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:46] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:46] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:46] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:46] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:46] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:51] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:51] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:51] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:51] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:51] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:51] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:51] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:51] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:51] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:51] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:51] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:51] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:51] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:08:56] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 1 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:08:56] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 1
+[2025-12-17 11:08:56] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 11:08:56] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 1
+[2025-12-17 11:08:56] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 1
+[2025-12-17 11:08:56] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:56] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\simulador_hidrometro_real-main\simulador_hidrometro_real-dev_sophia.sales\Medicoes_Simulador_1\hidrometro_27.bmp
+[2025-12-17 11:08:57] [INFO] [Strategy:Digital] Leitura extraída (m3): 0037.43
+[2025-12-17 11:08:57] [INFO] [ConsumoHistoricoDAO] Leitura 1 SALVA NO DB.
+[2025-12-17 11:08:57] [INFO] [SubsistemaDados] Leitura 37.430000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 11:08:57] [INFO] [LimiteAlertaDAO] Limite 0.000000 m³ buscado para SHA 1.
+[2025-12-17 11:08:57] [INFO] [SubsistemaAlerta] Verificando limite para SHA 1 | volume=37.430000 | limite=0.000000
+[2025-12-17 11:08:57] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 37.430000 m3.
+[2025-12-17 11:09:02] [INFO] [DBConnection] Conexao com DB fechada.
+[2025-12-17 11:09:09] [INFO] [DBConnection] Tabelas verificadas/criadas com sucesso.
+[2025-12-17 11:09:09] [INFO] [ConsumoHistoricoDAO] DAO de histórico inicializado.
+[2025-12-17 11:09:09] [INFO] [LimiteAlertaDAO] DAO de Limite de Alerta inicializado.
+[2025-12-17 11:09:09] [INFO] [SHAConfigDAO] DAO de Configuracao SHA inicializado.
+[2025-12-17 11:09:09] [INFO] [UsuarioDAOImpl] DAO de Usuários inicializado com sucesso.
+[2025-12-17 11:09:09] [INFO] [SubsistemaUsuarios] Subsistema inicializado.
+[2025-12-17 11:09:09] [INFO] [SubsistemaAlerta] Subsistema de Alerta inicializado.
+[2025-12-17 11:09:09] [INFO] [LeitorImagemSHA] Adapter inicializado (resolve caminho de imagem no diretório do SHA).
+[2025-12-17 11:09:09] [INFO] [SubsistemaDados] Subsistema de Dados (Facade interno) inicializado.
+[2025-12-17 11:09:09] [INFO] [MonitoramentoFacade] Fachada inicializada. Arquitetura pronta.
+[2025-12-17 11:09:11] [INFO] [SHAConfigDAO] Simulando SELECT de todos os SHAs ativos...
+[2025-12-17 11:09:26] [INFO] [MonitoramentoFacade] Solicitando criacao de usuario...
+[2025-12-17 11:09:26] [CRITICAL] [UsuarioDAOImpl] Usuario pedro salvo com sucesso. <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:09:26] [CRITICAL] [SubsistemaUsuarios] NOVO USUARIO CRIADO: pedro <-- AÇÃO DE AUDITORIA
+[2025-12-17 11:09:29] [INFO] [SHAConfigDAO] Simulando SELECT de todos os SHAs ativos...
+[2025-12-17 11:09:52] [INFO] [SHAConfigDAO] Configuracao SHA 1 SALVA/ATUALIZADA no DB.
+[2025-12-17 11:09:54] [INFO] [SHAConfigDAO] Simulando SELECT de todos os SHAs ativos...

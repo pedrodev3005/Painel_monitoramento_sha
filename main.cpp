@@ -35,11 +35,10 @@ void exibirMenu() {
    std::cout << "1. Criar Novo Usuario (Nome e CPF)\n";
    std::cout << "2. Definir Limite de Alerta para um ID\n";
    std::cout << "3. PROCESSAR LEITURA (ID do Usuario e SHA)\n";
-   std::cout << "4. Simular Consulta Consolidada (RF 2.3)\n";
-   std::cout << "5. VISUALIZAR DADOS (Usuarios e SHAs)\n";
-   std::cout << "6. CONFIGURAR NOVO SHA (Diretorio e Usuario)\n";
-   std::cout << "7. Monitoramento Automatico (Adicionar/Remover/Parar/Listar)\n";
-   std::cout << "8. Ajustar Intervalo do Monitoramento (segundos)\n";
+   std::cout << "4. VISUALIZAR DADOS (Usuarios e SHAs)\n";
+   std::cout << "5. CONFIGURAR NOVO SHA (Diretorio e Usuario)\n";
+   std::cout << "6. Monitoramento Automatico (Adicionar/Remover/Parar/Listar)\n";
+   std::cout << "7. Ajustar Intervalo do Monitoramento (segundos)\n";
    std::cout << "0. Sair\n";
    std::cout << "---------------------------------------------\n";
    std::cout << "Digite sua opcao: ";
@@ -147,7 +146,7 @@ static void listarMonitorados() {
 }
 
 static void loopAuto(MonitoramentoFacade& fachada) {
-   // ✅ NÃO imprimir INFO/ERROR/CRITICAL no terminal nessa thread (mas salva no arquivo)
+   // NÃO imprimir INFO/ERROR/CRITICAL no terminal nessa thread (mas salva no arquivo)
    Logger::getInstance()->setConsoleMinNivelThread(Logger::Nivel::ALERTA);
 
    while (g_rodando) {
@@ -248,16 +247,6 @@ static void processarComando(int comando,
       }
 
       case 4: {
-         std::cout << "--- Consulta Consolidada ---\n";
-         std::cout << "-> ID do usuario: ";
-         if (!(std::cin >> idUsuario)) { limparBuffer(); std::cout << "ID inválido.\n"; break; }
-
-         ConsumoDTO c = fachada.monitorarConsumoUsuario(idUsuario, 0, 0);
-         std::cout << "Total: " << c.totalConsumido << " m3\n";
-         break;
-      }
-
-      case 5: {
          visualizarDadosBrutos("monitoramento.db");
 
          std::cout << "\n==== Usuarios e SHAs Ativos ====\n";
@@ -281,7 +270,7 @@ static void processarComando(int comando,
          break;
       }
 
-      case 6: {
+      case 5: {
          std::string diretorio;
          std::cout << "--- Configurar Novo SHA ---\n";
          std::cout << "-> ID do usuario: ";
@@ -299,7 +288,7 @@ static void processarComando(int comando,
          break;
       }
 
-      case 7: {
+      case 6: {
          int op = 0;
          std::cout << "\n--- Monitoramento Automatico ---\n";
          std::cout << "1) Adicionar/Ativar um SHA\n";
@@ -375,7 +364,7 @@ static void processarComando(int comando,
          break;
       }
 
-      case 8: {
+      case 7: {
          int seg;
          std::cout << "--- Ajustar Intervalo do Monitoramento ---\n";
          std::cout << "-> Intervalo em segundos (>=1): ";
