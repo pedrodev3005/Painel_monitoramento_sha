@@ -1,39 +1,49 @@
-// Logger.hpp
-
 #ifndef LOGGER_HPP
 #define LOGGER_HPP
 
-#include <iostream>
 #include <string>
-#include <ctime>
-#include <iomanip>
+#include <fstream>
+#include <mutex>
 
-/**
- * @brief Implementa o Padrão Singleton para o serviço de Log.
- * Garante uma única instância global para rastreamento de eventos no painel.
- */
 class Logger {
+public:
+    enum class Nivel : int {
+        INFO = 0,
+        ERROR = 1,
+        CRITICAL = 2,
+        ALERTA = 3
+    };
+
+    static Logger* getInstance();
+
+    // ✅ controla o que aparece no console POR THREAD (o arquivo continua salvando tudo)
+    void setConsoleMinNivelThread(Nivel min);
+
+    // (opcional) troca o caminho do arquivo de log em runtime
+    void setArquivoLog(const std::string& caminho);
+
+    void registrarInfo(const std::string& subsistema, const std::string& msg);
+    void registrarErro(const std::string& subsistema, const std::string& msg);
+    void registrarEventoCritico(const std::string& subsistema, const std::string& msg);
+    void registrarAlerta(const std::string& origem, const std::string& mensagem);
+
 private:
-    static Logger* instancia;
+    Logger();
+    ~Logger();
 
-    // Construtor privado: Impede a instanciação externa (Singleton)
-    Logger() {}
-
-    // Proíbe cópia e atribuição (reforça o Singleton)
     Logger(const Logger&) = delete;
     Logger& operator=(const Logger&) = delete;
 
     std::string obterTimestamp() const;
+    void salvarEmArquivo(const std::string& linha);
+    void abrirArquivoSeNecessarioLocked(); // chamado com mutex já travado
 
-public:
-    // Método estático de acesso global
-    static Logger* getInstance();
+private:
+    std::mutex mtxArquivo;
+    std::ofstream arquivo;
+    std::string caminhoLog;
 
-    // Métodos de registro
-    void registrarInfo(const std::string& origem, const std::string& mensagem);
-    void registrarErro(const std::string& origem, const std::string& mensagem);
-    void registrarAlerta(const std::string& origem, const std::string& mensagem); // <-- NOVO
-    void registrarEventoCritico(const std::string& subsistema, const std::string& msg);
+    static Logger* instancia;
 };
 
 #endif // LOGGER_HPP

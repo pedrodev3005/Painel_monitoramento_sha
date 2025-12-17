@@ -1,0 +1,209 @@
+[2025-12-17 10:01:31] [INFO] [DBConnection] Tabelas verificadas/criadas com sucesso.
+[2025-12-17 10:01:31] [INFO] [ConsumoHistoricoDAO] DAO de histórico inicializado.
+[2025-12-17 10:01:31] [INFO] [LimiteAlertaDAO] DAO de Limite de Alerta inicializado.
+[2025-12-17 10:01:31] [INFO] [SHAConfigDAO] DAO de Configuracao SHA inicializado.
+[2025-12-17 10:01:31] [INFO] [UsuarioDAOImpl] DAO de Usuários inicializado com sucesso.
+[2025-12-17 10:01:31] [INFO] [SubsistemaUsuarios] Subsistema inicializado.
+[2025-12-17 10:01:31] [INFO] [SubsistemaAlerta] Subsistema de Alerta inicializado.
+[2025-12-17 10:01:31] [INFO] [LeitorImagemSHA] Adapter inicializado (resolve caminho de imagem no diretório do SHA).
+[2025-12-17 10:01:31] [INFO] [SubsistemaDados] Subsistema de Dados (Facade interno) inicializado.
+[2025-12-17 10:01:31] [INFO] [MonitoramentoFacade] Fachada inicializada. Arquitetura pronta.
+[2025-12-17 10:01:31] [INFO] [AUTO] Thread criada (aguardando comando).
+[2025-12-17 10:01:36] [INFO] [AUTO] Thread de monitoramento automatico criada (aguardando comando).
+[2025-12-17 10:01:36] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:01:36] [INFO] [AUTO] Monitoramento automatico ATIVADO para SHA=2 (Usuario=1).
+[2025-12-17 10:01:36] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:01:36] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:01:36] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:01:36] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:01:36] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_43.bmp
+[2025-12-17 10:01:36] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_43.bmp
+[2025-12-17 10:01:36] [ERROR] [Strategy:Digital] Não consegui detectar 5 separadores. Vou cair no split fixo (pode errar).
+[2025-12-17 10:01:36] [INFO] [Strategy:Digital] Templates carregados de: templates/digital/
+[2025-12-17 10:01:36] [INFO] [Strategy:Digital] Leitura extraída (m3): 6666.66
+[2025-12-17 10:01:36] [INFO] [ConsumoHistoricoDAO] Leitura 2 SALVA NO DB.
+[2025-12-17 10:01:36] [INFO] [SubsistemaDados] Leitura 6666.660000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:01:36] [INFO] [LimiteAlertaDAO] Limite 30.000000 m³ buscado para SHA 2.
+[2025-12-17 10:01:36] [INFO] [SubsistemaAlerta] Verificando limite para SHA 2 | volume=6666.660000 | limite=30.000000
+[2025-12-17 10:01:36] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=2 volume=6666.660000 > limite=30.000000
+[2025-12-17 10:01:36] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 6666.660000 m3.
+[2025-12-17 10:01:40] [INFO] [AUTO] Thread de monitoramento automatico finalizada.
+[2025-12-17 10:01:40] [INFO] [DBConnection] Conexao com DB fechada.
+[2025-12-17 10:05:10] [INFO] [DBConnection] Tabelas verificadas/criadas com sucesso.
+[2025-12-17 10:05:10] [INFO] [ConsumoHistoricoDAO] DAO de histórico inicializado.
+[2025-12-17 10:05:10] [INFO] [LimiteAlertaDAO] DAO de Limite de Alerta inicializado.
+[2025-12-17 10:05:10] [INFO] [SHAConfigDAO] DAO de Configuracao SHA inicializado.
+[2025-12-17 10:05:10] [INFO] [UsuarioDAOImpl] DAO de Usuários inicializado com sucesso.
+[2025-12-17 10:05:10] [INFO] [SubsistemaUsuarios] Subsistema inicializado.
+[2025-12-17 10:05:10] [INFO] [SubsistemaAlerta] Subsistema de Alerta inicializado.
+[2025-12-17 10:05:10] [INFO] [LeitorImagemSHA] Adapter inicializado (resolve caminho de imagem no diretório do SHA).
+[2025-12-17 10:05:10] [INFO] [SubsistemaDados] Subsistema de Dados (Facade interno) inicializado.
+[2025-12-17 10:05:10] [INFO] [MonitoramentoFacade] Fachada inicializada. Arquitetura pronta.
+[2025-12-17 10:05:25] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:05:25] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:05:25] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:05:25] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:05:25] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:05:25] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_43.bmp
+[2025-12-17 10:05:25] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_43.bmp
+[2025-12-17 10:05:25] [ERROR] [Strategy:Digital] Não consegui detectar 5 separadores. Vou cair no split fixo (pode errar).
+[2025-12-17 10:05:25] [INFO] [Strategy:Digital] Templates carregados de: templates/digital/
+[2025-12-17 10:05:25] [INFO] [Strategy:Digital] Leitura extraída (m3): 6666.66
+[2025-12-17 10:05:25] [INFO] [ConsumoHistoricoDAO] Leitura 2 SALVA NO DB.
+[2025-12-17 10:05:25] [INFO] [SubsistemaDados] Leitura 6666.660000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:05:25] [INFO] [LimiteAlertaDAO] Limite 30.000000 m³ buscado para SHA 2.
+[2025-12-17 10:05:25] [INFO] [SubsistemaAlerta] Verificando limite para SHA 2 | volume=6666.660000 | limite=30.000000
+[2025-12-17 10:05:25] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=2 volume=6666.660000 > limite=30.000000
+[2025-12-17 10:05:25] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 6666.660000 m3.
+[2025-12-17 10:05:30] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:05:30] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:05:30] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:05:30] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:05:30] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:05:30] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_43.bmp
+[2025-12-17 10:05:30] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_43.bmp
+[2025-12-17 10:05:30] [ERROR] [Strategy:Digital] Não consegui detectar 5 separadores. Vou cair no split fixo (pode errar).
+[2025-12-17 10:05:30] [INFO] [Strategy:Digital] Leitura extraída (m3): 6666.66
+[2025-12-17 10:05:30] [INFO] [ConsumoHistoricoDAO] Leitura 2 SALVA NO DB.
+[2025-12-17 10:05:30] [INFO] [SubsistemaDados] Leitura 6666.660000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:05:30] [INFO] [LimiteAlertaDAO] Limite 30.000000 m³ buscado para SHA 2.
+[2025-12-17 10:05:30] [INFO] [SubsistemaAlerta] Verificando limite para SHA 2 | volume=6666.660000 | limite=30.000000
+[2025-12-17 10:05:30] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=2 volume=6666.660000 > limite=30.000000
+[2025-12-17 10:05:30] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 6666.660000 m3.
+[2025-12-17 10:05:35] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:05:35] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:05:35] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:05:35] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:05:35] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:05:35] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_43.bmp
+[2025-12-17 10:05:35] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_43.bmp
+[2025-12-17 10:05:35] [ERROR] [Strategy:Digital] Não consegui detectar 5 separadores. Vou cair no split fixo (pode errar).
+[2025-12-17 10:05:35] [INFO] [Strategy:Digital] Leitura extraída (m3): 6666.66
+[2025-12-17 10:05:35] [INFO] [ConsumoHistoricoDAO] Leitura 2 SALVA NO DB.
+[2025-12-17 10:05:35] [INFO] [SubsistemaDados] Leitura 6666.660000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:05:35] [INFO] [LimiteAlertaDAO] Limite 30.000000 m³ buscado para SHA 2.
+[2025-12-17 10:05:35] [INFO] [SubsistemaAlerta] Verificando limite para SHA 2 | volume=6666.660000 | limite=30.000000
+[2025-12-17 10:05:35] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=2 volume=6666.660000 > limite=30.000000
+[2025-12-17 10:05:35] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 6666.660000 m3.
+[2025-12-17 10:06:27] [INFO] [DBConnection] Conexao com DB fechada.
+[2025-12-17 10:06:31] [INFO] [DBConnection] Tabelas verificadas/criadas com sucesso.
+[2025-12-17 10:06:31] [INFO] [ConsumoHistoricoDAO] DAO de histórico inicializado.
+[2025-12-17 10:06:31] [INFO] [LimiteAlertaDAO] DAO de Limite de Alerta inicializado.
+[2025-12-17 10:06:31] [INFO] [SHAConfigDAO] DAO de Configuracao SHA inicializado.
+[2025-12-17 10:06:31] [INFO] [UsuarioDAOImpl] DAO de Usuários inicializado com sucesso.
+[2025-12-17 10:06:31] [INFO] [SubsistemaUsuarios] Subsistema inicializado.
+[2025-12-17 10:06:31] [INFO] [SubsistemaAlerta] Subsistema de Alerta inicializado.
+[2025-12-17 10:06:31] [INFO] [LeitorImagemSHA] Adapter inicializado (resolve caminho de imagem no diretório do SHA).
+[2025-12-17 10:06:31] [INFO] [SubsistemaDados] Subsistema de Dados (Facade interno) inicializado.
+[2025-12-17 10:06:31] [INFO] [MonitoramentoFacade] Fachada inicializada. Arquitetura pronta.
+[2025-12-17 10:06:34] [INFO] [DBConnection] Conexao com DB fechada.
+[2025-12-17 10:07:14] [INFO] [DBConnection] Tabelas verificadas/criadas com sucesso.
+[2025-12-17 10:07:14] [INFO] [ConsumoHistoricoDAO] DAO de histórico inicializado.
+[2025-12-17 10:07:14] [INFO] [LimiteAlertaDAO] DAO de Limite de Alerta inicializado.
+[2025-12-17 10:07:14] [INFO] [SHAConfigDAO] DAO de Configuracao SHA inicializado.
+[2025-12-17 10:07:14] [INFO] [UsuarioDAOImpl] DAO de Usuários inicializado com sucesso.
+[2025-12-17 10:07:14] [INFO] [SubsistemaUsuarios] Subsistema inicializado.
+[2025-12-17 10:07:14] [INFO] [SubsistemaAlerta] Subsistema de Alerta inicializado.
+[2025-12-17 10:07:14] [INFO] [LeitorImagemSHA] Adapter inicializado (resolve caminho de imagem no diretório do SHA).
+[2025-12-17 10:07:14] [INFO] [SubsistemaDados] Subsistema de Dados (Facade interno) inicializado.
+[2025-12-17 10:07:14] [INFO] [MonitoramentoFacade] Fachada inicializada. Arquitetura pronta.
+[2025-12-17 10:07:26] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:07:26] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:07:26] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:07:26] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:07:26] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:07:26] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031
+[2025-12-17 10:07:26] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\leitura_hidrometro.bmp
+[2025-12-17 10:07:26] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\leitura_hidrometro.bmp
+[2025-12-17 10:07:26] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:07:26] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:07:26] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:07:31] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:07:31] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:07:31] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:07:31] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:07:31] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:07:31] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031
+[2025-12-17 10:07:31] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\leitura_hidrometro.bmp
+[2025-12-17 10:07:31] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\leitura_hidrometro.bmp
+[2025-12-17 10:07:31] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:07:31] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:07:31] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:07:36] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:07:36] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:07:36] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:07:36] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:07:36] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:07:36] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031
+[2025-12-17 10:07:36] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\leitura_hidrometro.bmp
+[2025-12-17 10:07:36] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\leitura_hidrometro.bmp
+[2025-12-17 10:07:36] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:07:36] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:07:36] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:07:40] [INFO] [LimiteAlertaDAO] Limite de 3.000000m³ SALVO/ATUALIZADO para SHA 2 (Usuario 1).
+[2025-12-17 10:07:41] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:07:41] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:07:41] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:07:41] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:07:41] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:07:41] [ERROR] [LeitorImagemSHA] Nenhuma imagem encontrada no diretório: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031
+[2025-12-17 10:07:41] [ERROR] [LeitorImagemSHA] Usando fallback (pode não existir): C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\leitura_hidrometro.bmp
+[2025-12-17 10:07:41] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\leitura_hidrometro.bmp
+[2025-12-17 10:07:41] [ERROR] [Strategy:Digital] Falha ao abrir imagem via stb_image.
+[2025-12-17 10:07:41] [ERROR] [Template] Leitura de volume invalida (0.0). Processamento interrompido.
+[2025-12-17 10:07:41] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.000000 m3.
+[2025-12-17 10:07:46] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:07:46] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:07:46] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:07:46] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:07:46] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:07:46] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_0.bmp
+[2025-12-17 10:07:46] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_0.bmp
+[2025-12-17 10:07:46] [INFO] [Strategy:Digital] Templates carregados de: templates/digital/
+[2025-12-17 10:07:46] [INFO] [Strategy:Digital] Leitura extraída (m3): 0000.30
+[2025-12-17 10:07:46] [INFO] [ConsumoHistoricoDAO] Leitura 2 SALVA NO DB.
+[2025-12-17 10:07:46] [INFO] [SubsistemaDados] Leitura 0.300000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:07:46] [INFO] [LimiteAlertaDAO] Limite 3.000000 m³ buscado para SHA 2.
+[2025-12-17 10:07:46] [INFO] [SubsistemaAlerta] Verificando limite para SHA 2 | volume=0.300000 | limite=3.000000
+[2025-12-17 10:07:46] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 0.300000 m3.
+[2025-12-17 10:07:51] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:07:51] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:07:51] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:07:51] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:07:51] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:07:51] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_1.bmp
+[2025-12-17 10:07:51] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_1.bmp
+[2025-12-17 10:07:51] [INFO] [Strategy:Digital] Leitura extraída (m3): 0001.35
+[2025-12-17 10:07:51] [INFO] [ConsumoHistoricoDAO] Leitura 2 SALVA NO DB.
+[2025-12-17 10:07:51] [INFO] [SubsistemaDados] Leitura 1.350000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:07:51] [INFO] [LimiteAlertaDAO] Limite 3.000000 m³ buscado para SHA 2.
+[2025-12-17 10:07:51] [INFO] [SubsistemaAlerta] Verificando limite para SHA 2 | volume=1.350000 | limite=3.000000
+[2025-12-17 10:07:51] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 1.350000 m3.
+[2025-12-17 10:07:56] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:07:56] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:07:56] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:07:56] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:07:56] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:07:56] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_2.bmp
+[2025-12-17 10:07:56] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_2.bmp
+[2025-12-17 10:07:56] [INFO] [Strategy:Digital] Leitura extraída (m3): 0003.30
+[2025-12-17 10:07:56] [INFO] [ConsumoHistoricoDAO] Leitura 2 SALVA NO DB.
+[2025-12-17 10:07:56] [INFO] [SubsistemaDados] Leitura 3.300000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:07:56] [INFO] [LimiteAlertaDAO] Limite 3.000000 m³ buscado para SHA 2.
+[2025-12-17 10:07:56] [INFO] [SubsistemaAlerta] Verificando limite para SHA 2 | volume=3.300000 | limite=3.000000
+[2025-12-17 10:07:56] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=2 volume=3.300000 > limite=3.000000
+[2025-12-17 10:07:56] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 3.300000 m3.
+[2025-12-17 10:08:01] [CRITICAL] [MonitoramentoFacade] INICIANDO PROCESSO COMPLETO DE SHA: 2 <-- ACAO DE AUDITORIA <-- AÇÃO DE AUDITORIA
+[2025-12-17 10:08:01] [INFO] [SubsistemaDados] Acionando Template Method para SHA: 2
+[2025-12-17 10:08:01] [INFO] [Template] Processador SHA inicializado.
+[2025-12-17 10:08:01] [INFO] [Template] INICIANDO FLUXO FIXO para SHA: 2
+[2025-12-17 10:08:01] [INFO] [SubsistemaDados] Acionando Leitor de Imagem (Adapter) para SHA: 2
+[2025-12-17 10:08:01] [INFO] [LeitorImagemSHA] Imagem selecionada: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_3.bmp
+[2025-12-17 10:08:01] [INFO] [Strategy:Digital] OCR digital: iniciando leitura em: C:\Users\pedro\Documents\sexto_periodo_computacao\padroes_de_projetos\atividade_3\Medicoes_202311250031\hidrometro_3.bmp
+[2025-12-17 10:08:01] [INFO] [Strategy:Digital] Leitura extraída (m3): 0003.40
+[2025-12-17 10:08:01] [INFO] [ConsumoHistoricoDAO] Leitura 2 SALVA NO DB.
+[2025-12-17 10:08:01] [INFO] [SubsistemaDados] Leitura 3.400000 SALVA NO DB (Usuario ID: 1).
+[2025-12-17 10:08:01] [INFO] [LimiteAlertaDAO] Limite 3.000000 m³ buscado para SHA 2.
+[2025-12-17 10:08:01] [INFO] [SubsistemaAlerta] Verificando limite para SHA 2 | volume=3.400000 | limite=3.000000
+[2025-12-17 10:08:01] [INFO] [SubsistemaAlerta] LIMITE EXCEDIDO! SHA=2 volume=3.400000 > limite=3.000000
+[2025-12-17 10:08:01] [INFO] [Template] FLUXO CONCLUÍDO. Volume registrado: 3.400000 m3.

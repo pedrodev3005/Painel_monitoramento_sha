@@ -67,13 +67,16 @@ struct Usuario {
 };
 
 struct Imagem {
-    std::string idSHA;          // Identificador do hidrômetro
-    std::string bufferConteudo; // Conteúdo da imagem (simulado)
-    std::string caminhoArquivo; // O caminho real no sistema de arquivos
-    
-    // Construtor obrigatório de 3 campos (Corrige o erro de conversão/inicialização)
-    Imagem(std::string sha, std::string buffer, std::string caminho) 
-        : idSHA(sha), bufferConteudo(buffer), caminhoArquivo(caminho) {}
+    std::string idSHA;
+    std::string buffer;         // se vc usa isso ainda
+    std::string caminhoArquivo; // vc usa isso no OCR
+
+    Imagem() : idSHA(""), buffer(""), caminhoArquivo("") {} // ✅ NOVO
+
+    Imagem(std::string sha, std::string buf, std::string caminho)
+        : idSHA(std::move(sha)),
+          buffer(std::move(buf)),
+          caminhoArquivo(std::move(caminho)) {}
 };
 
 /**

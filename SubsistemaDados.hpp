@@ -1,26 +1,18 @@
-// SubsistemaDados.hpp (ATUALIZADO)
-
 #ifndef SUBSISTEMA_DADOS_HPP
 #define SUBSISTEMA_DADOS_HPP
+
+#include "LeitorImagemSHA.hpp"
+#include "SubsistemaAlerta.hpp"
+#include "ConsumoHistoricoDAO.hpp"
+#include "SHAConfigDAO.hpp"
 
 #include <string>
 #include <ctime>
 
-#include "LeitorImagemSHA.hpp"       // Adapter (pega caminho da imagem)
-#include "SubsistemaAlerta.hpp"      // Subsistema de alerta
-#include "ConsumoHistoricoDAO.hpp"   // DAO de histórico
-#include "SHAConfigDAO.hpp"          // DAO de configuração do SHA
-
-// (Se ConsumoDTO estiver definido em outro header incluído no projeto, ok.)
-struct ConsumoDTO;
+#include <unordered_map>
+#include <mutex>
 
 class SubsistemaDados {
-private:
-    LeitorImagemSHA* leitorSHA;
-    SubsistemaAlerta* subsistemaAlerta;
-    ConsumoHistoricoDAO* historicoDAO;
-    SHAConfigDAO* configDAO;
-
 public:
     SubsistemaDados(
         LeitorImagemSHA* leitor,
@@ -29,15 +21,41 @@ public:
         SHAConfigDAO* configDao
     );
 
-    // Template Method (cliente)
+    // ====== Usados pelo Template Method ======
+    double obterLeituraVolume(const std::string& idSHA);
+    void salvarConsumo(const std::string& idSHA, double volumeLido);
+
+    // ====== Entrada do Template Method ======
     void iniciarProcessamento(const std::string& idSHA, int idUsuario);
 
-    // Consulta consolidada (DAO)
+    // ✅ NOVO: só processa se aparecer imagem nova
+    // Retorna true se processou, false se não tinha imagem nova (ou se estava processando)
+    bool iniciarProcessamentoSeNovaImagem(const std::string& idSHA, int idUsuario);
+
+    // ====== Consulta ======
     ConsumoDTO monitorarConsumoUsuario(int idUsuario, std::time_t inicio, std::time_t fim);
 
-    // Utilitários chamados pelo Template Method
-    double obterLeituraVolume(const std::string& idSHA);   // agora faz: Adapter -> Strategy OCR
-    void salvarConsumo(const std::string& idSHA, double volumeLido);
+private:
+    LeitorImagemSHA* leitorSHA = nullptr;
+    SubsistemaAlerta* subsistemaAlerta = nullptr;
+    ConsumoHistoricoDAO* historicoDAO = nullptr;
+    SHAConfigDAO* configDAO = nullptr;
+
+    // ====== Dedup / concorrência (multi-SHA) ======
+    std::mutex mtxDedup;
+
+    // assinatura da última imagem processada por SHA
+    std::unordered_map<std::string, std::string> ultimaAssinaturaPorSHA;
+
+    // evita processar o mesmo SHA simultaneamente em 2 threads
+    std::unordered_map<std::string, bool> processandoPorSHA;
+
+    // cache pra não chamar obterImagem() duas vezes no mesmo fluxo
+    std::unordered_map<std::string, Imagem> cacheImagemPorSHA;
+    std::unordered_map<std::string, TipoMedidor> cacheTipoPorSHA;
+
+private:
+    static std::string assinaturaArquivo(const std::string& caminho);
 };
 
 #endif // SUBSISTEMA_DADOS_HPP

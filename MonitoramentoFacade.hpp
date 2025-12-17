@@ -1,35 +1,67 @@
 // MonitoramentoFacade.hpp
 
-#ifndef MONITORAMENTO_FACADE_H
-#define MONITORAMENTO_FACADE_H
+#ifndef MONITORAMENTO_FACADE_HPP
+#define MONITORAMENTO_FACADE_HPP
 
-// Inclui os subsistemas como dependências
 #include "SubsistemaUsuarios.hpp"
 #include "SubsistemaAlerta.hpp"
 #include "SubsistemaDados.hpp"
 #include "Logger.hpp"
 
+#include <atomic>
+#include <condition_variable>
+#include <mutex>
+#include <thread>
+#include <utility>
+#include <vector>
+#include <string>
+
 class MonitoramentoFacade {
 private:
-    // Referências privadas para os subsistemas (Composição)
     SubsistemaUsuarios* subsistemaUsuarios;
     SubsistemaAlerta* subsistemaAlerta;
     SubsistemaDados* subsistemaDados;
 
-public:
-    // Construtor: Requer a injeção de todos os subsistemas
-    MonitoramentoFacade(SubsistemaUsuarios* u, SubsistemaAlerta* a, SubsistemaDados* d);
+    // ===== Monitoramento automático =====
+    std::atomic<bool> autoAtivo{false};
+    std::atomic<bool> encerrando{false};
+    std::atomic<int> intervaloSeg{5};
 
-    // --- RF 1: Gestão de Usuários (Delega ao SubsistemaUsuarios) ---
+    std::thread thAuto;
+    std::mutex mtxAuto;
+    std::condition_variable cvAuto;
+
+    // lista de SHAs monitorados automaticamente: (idSHA, idUsuario)
+    std::vector<std::pair<std::string, int>> shasAuto;
+
+    void loopMonitoramentoAutomatico();
+
+public:
+    MonitoramentoFacade(SubsistemaUsuarios* u, SubsistemaAlerta* a, SubsistemaDados* d);
+    ~MonitoramentoFacade();
+
+    // RF1
     bool criarUsuario(const Usuario& dados);
     Usuario buscarUsuarioComContas(int idUsuario);
 
-    // --- RF 2: Monitoramento (Inicia o Template Method) ---
+    // RF2 (manual / “processar leitura”)
     void processarLeituraDiaria(const std::string& idSHA, int idUsuario);
     ConsumoDTO monitorarConsumoUsuario(int idUsuario, std::time_t inicio, std::time_t fim);
 
-    // --- RF 3: Alerta e Configuração (Delega ao SubsistemaAlerta) ---
+    // RF3
     bool definirLimiteAlerta(int idUsuario, const std::string& idSHA, double limiteVolumeM3);
+
+    // ===== AUTO (manual start/stop) =====
+    bool estaMonitorandoAutomatico() const { return autoAtivo.load(); }
+
+    // inicia monitoramento automático de UM SHA (já cadastrado)
+    void iniciarMonitoramentoAutomaticoSHA(const std::string& idSHA, int idUsuario);
+
+    // para tudo
+    void pararMonitoramentoAutomatico();
+
+    // muda intervalo
+    void ajustarIntervaloMonitoramento(int segundos);
 };
 
-#endif // MONITORAMENTO_FACADE_H
+#endif

@@ -1,32 +1,50 @@
 // SubsistemaAlerta.hpp
+#ifndef SUBSISTEMA_ALERTA_HPP
+#define SUBSISTEMA_ALERTA_HPP
 
-#ifndef SUBSISTEMA_ALERTA_H
-#define SUBSISTEMA_ALERTA_H
-
-#include "NotificacaoFactory.hpp"
-#include "Entidades.hpp"
-#include "Logger.hpp"
+#include <string>
+#include <vector>
+#include <algorithm>
 #include "LimiteAlertaDAO.hpp"
+#include "Logger.hpp"
 
-
-/**
- * @brief Gerencia os limites de consumo e dispara notificações utilizando o Factory Method.
- */
-class SubsistemaAlerta {
-private:
-    NotificadorFactory* notificadorFactory;
-    LimiteAlertaDAO* limiteDAO; 
-
+// ===============================
+// Observer
+// ===============================
+class IObservadorAlerta {
 public:
-    SubsistemaAlerta(NotificadorFactory* factory, LimiteAlertaDAO* dao) 
-        : notificadorFactory(factory), limiteDAO(dao) {
-        Logger::getInstance()->registrarInfo("SubsistemaAlerta", "Subsistema inicializado.");
-    }
+    virtual ~IObservadorAlerta() = default;
 
-    bool definirLimite(int idUsuario, const std::string& idSHA, double limiteVolumeM3);
-    double buscarLimite(int idUsuario, const std::string& idSHA);
-    void notificarAlerta(int idUsuario, const AlertaConsumo& alerta, CanalAlerta canal);
-    bool verificarLimiteExcedido(int idUsuario, const std::string& idSHA, double volumeAtual);
+    // chamando quando o limite estoura
+    virtual void notificarLimiteExcedido(
+        int idUsuario,
+        const std::string& idSHA,
+        double volumeLidoM3,
+        double limiteM3
+    ) = 0;
 };
 
-#endif // SUBSISTEMA_ALERTA_H
+// ===============================
+// Subsistema
+// ===============================
+class SubsistemaAlerta {
+private:
+    LimiteAlertaDAO* limiteDAO;
+    std::vector<IObservadorAlerta*> observadores;
+
+public:
+    explicit SubsistemaAlerta(LimiteAlertaDAO* dao);
+
+    bool definirLimite(int idUsuario, const std::string& idSHA, double limiteVolumeM3);
+
+    // ESTE É O MÉTODO QUE O TEMPLATE METHOD PRECISA CHAMAR
+    void verificarLimiteExcedido(int idUsuario, const std::string& idSHA, double volumeLidoM3);
+
+    // dispara para observers
+    void notificarLimiteExcedido(int idUsuario, const std::string& idSHA, double volumeLidoM3, double limiteM3);
+
+    void adicionarObservador(IObservadorAlerta* obs);
+    void removerObservador(IObservadorAlerta* obs);
+};
+
+#endif
